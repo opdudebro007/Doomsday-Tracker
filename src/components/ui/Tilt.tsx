@@ -73,10 +73,7 @@ export function Tilt({
       className={cn("transition-transform duration-[150ms] ease-out", className)}
       {...props}
     >
-      {/* We can add a child container that gets the actual transform */}
-      <div style={{ transform: "translateZ(30px)" }} className="h-full w-full">
-        {children}
-      </div>
+      {children}
     </motion.div>
   );
 }
