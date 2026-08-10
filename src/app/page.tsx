@@ -62,8 +62,8 @@ export default function Home() {
     let result = mcuTimeline;
     
     // Filter by search query
-    if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase().trim();
+    if (searchQuery.trim() !== "") {
+      const q = searchQuery.toLowerCase();
       result = result.filter(i => 
         i.title.toLowerCase().includes(q) || 
         i.characters.some(c => c.toLowerCase().includes(q))
@@ -103,7 +103,7 @@ export default function Home() {
   if (!isHydrated || !prefsLoaded) return null;
 
   return (
-    <div className="container mx-auto px-6 py-8 max-w-[1200px]">
+    <div className="container mx-auto px-6 py-8 max-w-[1600px]">
       
       {/* TOP DASHBOARD AREA */}
       <div className="bg-card/40 backdrop-blur-2xl border border-border/50 rounded-2xl p-8 mb-10 shadow-2xl relative overflow-hidden">

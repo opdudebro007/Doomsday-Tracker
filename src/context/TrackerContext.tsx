@@ -37,8 +37,8 @@ const TrackerContext = createContext<TrackerContextType | undefined>(undefined);
 export const TrackerProvider = ({ children }: { children: React.ReactNode }) => {
   const [watchedIds, setWatchedIds] = useState<string[]>([]);
   const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
-  const [searchQuery, setSearchQuery] = useState("");
   const [isHydrated, setIsHydrated] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   // Load from local storage on mount
   useEffect(() => {
@@ -128,14 +128,33 @@ export const TrackerProvider = ({ children }: { children: React.ReactNode }) => 
   const finishPaceDays = Math.ceil(totalRuntimeRemaining / (3 * 60));
 
   return (
-    <TrackerContext.Provider value={{
-      watchedIds, favoriteIds, toggleWatched, toggleFavorite, resetProgress, isHydrated,
-      searchQuery, setSearchQuery,
-      totalTitles, watchedTitlesCount, overallProgress,
-      moviesWatched, showsWatched, totalMovies, totalShows,
-      hoursWatched, minutesWatched, hoursRemaining, minutesRemaining,
-      streak, finishPaceDays, nextUnwatched, lastWatched
-    }}>
+    <TrackerContext.Provider
+      value={{
+        watchedIds,
+        favoriteIds,
+        toggleWatched,
+        toggleFavorite,
+        resetProgress,
+        isHydrated,
+        searchQuery,
+        setSearchQuery,
+        totalTitles,
+        watchedTitlesCount,
+        overallProgress,
+        moviesWatched,
+        showsWatched,
+        totalMovies,
+        totalShows,
+        hoursWatched,
+        hoursRemaining,
+        minutesWatched,
+        minutesRemaining,
+        streak,
+        finishPaceDays,
+        nextUnwatched,
+        lastWatched
+      }}
+    >
       {children}
     </TrackerContext.Provider>
   );
