@@ -60,7 +60,7 @@ export default function StatsPage() {
       list.push({ icon: "⚡", name: "Phase 1 Complete", desc: "The Avengers assemble." });
     }
 
-    const infinitySaga = mcuTimeline.filter(t => t.phase >= 1 && t.phase <= 3);
+    const infinitySaga = mcuTimeline.filter(t => typeof t.phase === 'number' && t.phase >= 1 && t.phase <= 3);
     if (infinitySaga.length > 0 && infinitySaga.every(t => watchedIds.includes(t.id))) {
       list.push({ icon: "🛡️", name: "Infinity Saga Complete", desc: "I am Iron Man." });
     }

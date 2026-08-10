@@ -250,7 +250,7 @@ export default function Home() {
             {filteredAndSorted.map((item) => {
               const isWatched = watchedIds.includes(item.id);
               const isFavorite = favoriteIds.includes(item.id);
-              const saga = item.phase <= 3 ? "Infinity Saga" : "Multiverse Saga";
+              const saga = item.phase === "Legacy" ? "Legacy Universe" : (item.phase as number) <= 3 ? "Infinity Saga" : "Multiverse Saga";
               
               return (
                 <motion.div layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ duration: 0.2 }} key={item.id}>
