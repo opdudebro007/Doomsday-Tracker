@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
+import confetti from "canvas-confetti";
 import { MCUItem, mcuTimeline } from "../data/timeline";
 
 interface TrackerContextType {
@@ -70,9 +71,19 @@ export const TrackerProvider = ({ children }: { children: React.ReactNode }) => 
   }, [watchedIds, favoriteIds, isHydrated]);
 
   const toggleWatched = (id: string) => {
-    setWatchedIds((prev) =>
-      prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]
-    );
+    setWatchedIds((prev) => {
+      if (!prev.includes(id)) {
+        confetti({
+          particleCount: 50,
+          spread: 60,
+          origin: { y: 0.7 },
+          colors: ['#e62429', '#ffffff', '#eab308'],
+          disableForReducedMotion: true
+        });
+        return [...prev, id];
+      }
+      return prev.filter((i) => i !== id);
+    });
   };
 
   const toggleFavorite = (id: string) => {
