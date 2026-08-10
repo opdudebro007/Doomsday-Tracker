@@ -7,6 +7,7 @@ import { Play, Check, Clock, Calendar, Flame, Search, CheckCircle2, Circle, Filt
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { TiltCard } from "@/components/ui/TiltCard";
 
 type FilterType = "all" | "imp" | "optional" | "legacy" | "movies" | "shows" | "watched" | "unwatched" | "favorites" | "phase1" | "phase2" | "phase3" | "phase4" | "phase5" | "phase6";
 type SortType = "timeline" | "runtime" | "alpha" | "newest" | "oldest";
@@ -254,7 +255,8 @@ export default function Home() {
               
               return (
                 <motion.div layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ duration: 0.2 }} key={item.id}>
-                  <div className="flex flex-col h-full rounded-2xl bg-card border border-border overflow-hidden group">
+                  <TiltCard>
+                    <div className="flex flex-col h-full rounded-2xl bg-card border border-border overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-300">
                     
                     {/* Poster Area */}
                     <Link href={`/title/${item.id}`} className="relative w-full aspect-[2/3] flex flex-col items-center justify-center transition-colors overflow-hidden group/poster bg-muted">
@@ -343,9 +345,9 @@ export default function Home() {
                           )}
                         </button>
                       </div>
+                      </div>
                     </div>
-
-                  </div>
+                  </TiltCard>
                 </motion.div>
               );
             })}
