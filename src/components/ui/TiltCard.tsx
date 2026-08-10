@@ -1,22 +1,10 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 export function TiltCard({ children }: { children: React.ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
   
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  
-  // Smooth out the movement
-  const mouseXSpring = useSpring(x, { stiffness: 300, damping: 30 });
-  const mouseYSpring = useSpring(y, { stiffness: 300, damping: 30 });
-  
-  // Map mouse position to rotation (-10deg to 10deg)
-  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["10deg", "-10deg"]);
-  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-10deg", "10deg"]);
-
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return;
     const rect = ref.current.getBoundingClientRect();
@@ -29,23 +17,25 @@ export function TiltCard({ children }: { children: React.ReactNode }) {
     const xPct = mouseX / width - 0.5;
     const yPct = mouseY / height - 0.5;
     
-    x.set(xPct);
-    y.set(yPct);
+    // Map mouse position to rotation (-10deg to 10deg)
+    const rotateX = yPct * -20;
+    const rotateY = xPct * 20;
+    
+    ref.current.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
   };
 
   const handleMouseLeave = () => {
-    x.set(0);
-    y.set(0);
+    if (!ref.current) return;
+    ref.current.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
   };
 
   return (
-    <motion.div
+    <div
       ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
-        rotateX,
-        rotateY,
+        transition: "transform 0.15s ease-out",
         transformStyle: "preserve-3d",
       }}
       className="h-full w-full will-change-transform"
@@ -56,6 +46,6 @@ export function TiltCard({ children }: { children: React.ReactNode }) {
       >
         {children}
       </div>
-    </motion.div>
+    </div>
   );
 }

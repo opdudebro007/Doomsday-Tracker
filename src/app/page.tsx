@@ -268,7 +268,7 @@ export default function Home() {
               const saga = item.phase === "Legacy" ? "Legacy Universe" : (item.phase as number) <= 3 ? "Infinity Saga" : "Multiverse Saga";
               
               return (
-                <motion.div layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ duration: 0.2 }} key={item.id}>
+                <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ duration: 0.2 }} key={item.id}>
                   <TiltCard>
                     <div className="flex flex-col h-full rounded-2xl bg-card/40 backdrop-blur-md border border-border/50 overflow-hidden group shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(230,36,41,0.15)] transition-all duration-300 relative">
                     
@@ -279,6 +279,8 @@ export default function Home() {
                         <img 
                           src={item.posterUrl} 
                           alt={item.title} 
+                          loading="lazy"
+                          decoding="async"
                           className={cn("absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/poster:scale-110", isWatched ? "opacity-40 mix-blend-luminosity" : "opacity-90")} 
                         />
                       )}
