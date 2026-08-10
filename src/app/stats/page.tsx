@@ -115,7 +115,7 @@ export default function StatsPage() {
           </div>
           <div className="flex justify-center gap-6 mt-4">
             {chartData.map((entry, index) => (
-              <div key={entry.name} className="flex items-center gap-2 text-sm text-text-secondary">
+              <div key={entry.name} className="flex items-center gap-2 text-sm text-muted-foreground">
                 <div className="w-3 h-3 rounded-full" style={{ backgroundColor: COLORS[index % COLORS.length] }}></div>
                 {entry.name}: {entry.value}
               </div>
@@ -153,15 +153,15 @@ export default function StatsPage() {
         {achievements.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {achievements.map((ach, idx) => (
-              <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-4 text-center flex flex-col items-center justify-center gap-2">
+              <div key={idx} className="bg-foreground/5 border border-border rounded-xl p-4 text-center flex flex-col items-center justify-center gap-2">
                 <div className="text-4xl mb-2">{ach.icon}</div>
                 <div className="font-bold text-sm">{ach.name}</div>
-                <div className="text-xs text-text-secondary">{ach.desc}</div>
+                <div className="text-xs text-muted-foreground">{ach.desc}</div>
               </div>
             ))}
           </div>
         ) : (
-          <div className="text-center py-8 text-text-secondary">
+          <div className="text-center py-8 text-muted-foreground">
             <p>Watch titles to start unlocking achievements.</p>
           </div>
         )}
@@ -177,7 +177,7 @@ function StatCard({ icon, title, value }: { icon: React.ReactNode, title: string
         {icon}
       </div>
       <div>
-        <div className="text-xs text-text-secondary uppercase tracking-wider">{title}</div>
+        <div className="text-xs text-muted-foreground uppercase tracking-wider">{title}</div>
         <div className="text-2xl font-bold font-heading">{value}</div>
       </div>
     </Card>

@@ -4,15 +4,21 @@ import React, { useState, useRef } from "react";
 import { useTracker } from "@/context/TrackerContext";
 import { Card } from "@/components/ui/Card";
 import { Settings2, Download, Upload, Trash2, Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
 export default function SettingsPage() {
   const { watchedIds, resetProgress, isHydrated } = useTracker();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [importStatus, setImportStatus] = useState<string | null>(null);
 
-  // We are forcing dark mode in layout.tsx, but providing a toggle UI for aesthetic as requested.
-  // Realistically it would require next-themes, but we'll simulate the state here.
-  const [isDark, setIsDark] = useState(true);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isDark = theme === "dark";
 
   if (!isHydrated) return null;
 
@@ -67,11 +73,11 @@ export default function SettingsPage() {
               <p className="text-sm text-text-secondary">Toggle between dark and light mode (Dark mode highly recommended).</p>
             </div>
             <button
-              onClick={() => setIsDark(!isDark)}
-              className="p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-colors border border-white/10 flex items-center gap-2"
+              onClick={() => setTheme(isDark ? "light" : "dark")}
+              className="p-3 bg-foreground/5 hover:bg-foreground/10 rounded-lg transition-colors border border-border flex items-center gap-2"
             >
-              {isDark ? <Moon className="w-5 h-5 text-marvel-red" /> : <Sun className="w-5 h-5 text-yellow-500" />}
-              {isDark ? "Dark Mode" : "Light Mode"}
+              {mounted && isDark ? <Moon className="w-5 h-5 text-marvel-red" /> : <Sun className="w-5 h-5 text-yellow-500" />}
+              {mounted && isDark ? "Dark Mode" : "Light Mode"}
             </button>
           </div>
         </Card>

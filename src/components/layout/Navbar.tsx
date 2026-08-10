@@ -36,7 +36,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-[#0a0a0c]/80 backdrop-blur-md border-b border-white/5 py-3">
+    <nav className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-border py-3">
       <div className="px-6 flex items-center justify-between gap-4">
         
         {/* LOGO */}
@@ -49,7 +49,7 @@ export function Navbar() {
               DOOMSDAY <span className="text-[#e62429]">TRACKER</span>
             </span>
           </div>
-          <span className="text-[10px] text-text-secondary mt-0.5 tracking-wider">
+          <span className="text-[10px] text-muted-foreground mt-0.5 tracking-wider">
             MCU Road to Avengers: Doomsday
           </span>
         </Link>
@@ -61,7 +61,7 @@ export function Navbar() {
             <div className="w-6 h-6 rounded-full bg-marvel-red/20 flex items-center justify-center text-marvel-red">
               <Clock className="w-3.5 h-3.5" />
             </div>
-            <span className="text-text-secondary">Doomsday in:</span>
+            <span className="text-muted-foreground">Doomsday in:</span>
             <span className="font-mono text-marvel-red font-bold">
               {mounted ? `${timeLeft.d}d ${timeLeft.h}h ${timeLeft.m}m ${timeLeft.s}s` : "Loading..."}
             </span>
@@ -69,11 +69,11 @@ export function Navbar() {
 
           {/* Search */}
           <div className="relative w-64 xl:w-80">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-secondary" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
             <input
               type="text"
               placeholder="Search title, character..."
-              className="w-full bg-[#111113] border border-white/10 rounded-full py-2 pl-9 pr-4 text-sm text-white placeholder:text-text-secondary focus:outline-none focus:border-white/20 transition-colors"
+              className="w-full bg-muted border border-border rounded-full py-2 pl-9 pr-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-border transition-colors"
             />
           </div>
         </div>
@@ -85,11 +85,11 @@ export function Navbar() {
             <Flame className="w-3.5 h-3.5" fill="currentColor" /> {streak}d
           </div>
           
-          <button className="w-9 h-9 flex items-center justify-center rounded-full bg-[#111113] border border-white/10 text-[#5cb85c] hover:bg-white/5 transition-colors">
+          <button className="w-9 h-9 flex items-center justify-center rounded-full bg-muted border border-border text-[#5cb85c] hover:bg-foreground/5 transition-colors">
             <Shuffle className="w-4 h-4" />
           </button>
           
-          <button className="w-9 h-9 flex items-center justify-center rounded-full bg-[#111113] border border-white/10 text-yellow-500 hover:bg-white/5 transition-colors">
+          <button className="w-9 h-9 flex items-center justify-center rounded-full bg-muted border border-border text-yellow-500 hover:bg-foreground/5 transition-colors">
             <Trophy className="w-4 h-4" />
           </button>
           
@@ -98,11 +98,11 @@ export function Navbar() {
             Stats <span className="bg-marvel-red text-white px-1.5 py-0.5 rounded-full text-[10px]">{overallProgress}%</span>
           </Link>
 
-          <button className="w-9 h-9 flex items-center justify-center rounded-full bg-[#111113] border border-white/10 text-text-secondary hover:text-white hover:bg-white/5 transition-colors">
+          <button className="w-9 h-9 flex items-center justify-center rounded-full bg-muted border border-border text-muted-foreground hover:text-foreground hover:bg-foreground/5 transition-colors">
             <Share2 className="w-4 h-4" />
           </button>
 
-          <Link href="/settings" className="w-9 h-9 flex items-center justify-center rounded-full bg-[#111113] border border-white/10 text-text-secondary hover:text-white hover:bg-white/5 transition-colors">
+          <Link href="/settings" className="w-9 h-9 flex items-center justify-center rounded-full bg-muted border border-border text-muted-foreground hover:text-foreground hover:bg-foreground/5 transition-colors">
             <Settings className="w-4 h-4" />
           </Link>
         </div>

@@ -3,23 +3,43 @@
 @theme {
   --color-marvel-red: #e62429;
   --color-marvel-dark-red: #9e1418;
-  --color-background-dark: #0a0a0c;
-  --color-card-bg: #111113;
-  --color-card-border: rgba(255, 255, 255, 0.05);
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #9ca3af;
+  --color-background: var(--bg);
+  --color-card: var(--card);
+  --color-card-border: var(--border);
+  --color-foreground: var(--fg);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-fg);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-fg);
 }
 
 :root {
-  --background: var(--color-background-dark);
-  --foreground: var(--color-text-primary);
+  --bg: #f9fafb;
+  --fg: #111827;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --muted: #f3f4f6;
+  --muted-fg: #6b7280;
+  --accent: #f3f4f6;
+  --accent-fg: #111827;
+}
+
+.dark {
+  --bg: #0a0a0c;
+  --fg: #ffffff;
+  --card: #111216;
+  --border: #22242a;
+  --muted: #1e2025;
+  --muted-fg: #9ca3af;
+  --accent: #1e2025;
+  --accent-fg: #ffffff;
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--color-background);
   background-image: radial-gradient(circle at top right, rgba(230,36,41,0.05), transparent 40%),
                     radial-gradient(circle at bottom left, rgba(230,36,41,0.05), transparent 40%);
-  color: var(--foreground);
+  color: var(--color-foreground);
   font-family: var(--font-sans), sans-serif;
   overflow-x: hidden;
   min-height: 100vh;

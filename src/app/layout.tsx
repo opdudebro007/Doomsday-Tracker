@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import { TrackerProvider } from "@/context/TrackerContext";
 import { Navbar } from "@/components/layout/Navbar";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -25,14 +26,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable} dark`} suppressHydrationWarning>
-      <body className="min-h-full flex flex-col bg-background-dark text-text-primary antialiased selection:bg-marvel-red selection:text-white">
-        <TrackerProvider>
-          <Navbar />
-          <main className="flex-1">
-            {children}
-          </main>
-        </TrackerProvider>
+    <html lang="en" className={`${inter.variable} ${outfit.variable}`} suppressHydrationWarning>
+      <body className="min-h-full flex flex-col bg-background text-foreground antialiased selection:bg-marvel-red selection:text-white">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <TrackerProvider>
+            <Navbar />
+            <main className="flex-1">
+              {children}
+            </main>
+          </TrackerProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

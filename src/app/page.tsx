@@ -95,7 +95,7 @@ export default function Home() {
     <div className="container mx-auto px-6 py-8 max-w-[1200px]">
       
       {/* TOP DASHBOARD AREA */}
-      <div className="bg-[#121316] border border-[#22242a] rounded-2xl p-8 mb-10 shadow-2xl relative overflow-hidden">
+      <div className="bg-card border border-border rounded-2xl p-8 mb-10 shadow-2xl relative overflow-hidden">
         {/* Subtle Background Glows */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-marvel-red/10 rounded-full blur-[100px] pointer-events-none"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-marvel-red/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -118,12 +118,12 @@ export default function Home() {
               </svg>
               <div className="absolute flex flex-col items-center justify-center text-center">
                 <span className="text-[52px] font-bold font-heading leading-tight">{overallProgress}%</span>
-                <span className="text-[10px] font-bold text-text-secondary tracking-[0.2em] mt-1">OVERALL PROGRESS</span>
+                <span className="text-[10px] font-bold text-muted-foreground tracking-[0.2em] mt-1">OVERALL PROGRESS</span>
                 <span className="text-[13px] font-bold text-[#e62429] mt-1 tracking-wide">{watchedTitlesCount} / {totalTitles} Done</span>
               </div>
             </div>
             
-            <div className="w-full max-w-[280px] bg-[#222] h-2 rounded-full overflow-hidden">
+            <div className="w-full max-w-[280px] bg-muted h-2 rounded-full overflow-hidden">
               <div className="bg-gradient-to-r from-orange-500 to-[#e62429] h-full rounded-full relative" style={{ width: `${overallProgress}%` }}>
                 <div className="absolute right-0 top-0 bottom-0 w-4 bg-white/30 blur-[2px]"></div>
               </div>
@@ -134,11 +134,11 @@ export default function Home() {
           <div className="xl:w-2/3 flex flex-col gap-5 justify-center">
             
             {/* UP NEXT CARD */}
-            <div className="flex-1 p-5 rounded-2xl border border-[#3f1b1e] bg-gradient-to-r from-[#1e1617] to-[#161112]">
+            <div className="flex-1 p-5 rounded-2xl border border-border bg-gradient-to-r from-[#1e1617] to-[#161112]">
               {nextUnwatched ? (
                 <div className="flex flex-col sm:flex-row gap-5 items-center">
                   {/* Poster Placeholder */}
-                  <div className="w-20 h-28 bg-[#1a1112] rounded-xl border border-[#3f1b1e] shrink-0 flex items-center justify-center overflow-hidden">
+                  <div className="w-20 h-28 bg-muted rounded-xl border border-border shrink-0 flex items-center justify-center overflow-hidden">
                     {nextUnwatched.posterUrl ? (
                       <img src={nextUnwatched.posterUrl} alt={nextUnwatched.title} className="w-full h-full object-cover" />
                     ) : (
@@ -151,11 +151,11 @@ export default function Home() {
                       <span className="bg-[#e62429] text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider uppercase">
                         UP NEXT • TIMELINE #{nextUnwatched.timelineOrder}
                       </span>
-                      <span className="text-xs text-text-secondary font-medium">{nextUnwatched.runtime} min</span>
+                      <span className="text-xs text-muted-foreground font-medium">{nextUnwatched.runtime} min</span>
                     </div>
                     
                     <h2 className="text-[22px] font-bold font-heading mb-1.5 leading-tight tracking-wide">{nextUnwatched.title}</h2>
-                    <p className="text-[13px] text-text-secondary line-clamp-1 max-w-xl mb-4 font-medium">{nextUnwatched.synopsis}</p>
+                    <p className="text-[13px] text-muted-foreground line-clamp-1 max-w-xl mb-4 font-medium">{nextUnwatched.synopsis}</p>
                     
                   </div>
 
@@ -186,7 +186,7 @@ export default function Home() {
 
             {/* LAST WATCHED FOOTER */}
             <div className="flex justify-between items-center text-[13px] px-2 mt-2">
-              <div className="text-text-secondary font-medium">Last Watched: <span className="text-white font-bold">{lastWatched?.title || "None"}</span></div>
+              <div className="text-muted-foreground font-medium">Last Watched: <span className="text-foreground font-bold">{lastWatched?.title || "None"}</span></div>
               {lastWatched && <div className="text-[#e62429] font-bold tracking-wide">Timeline #{lastWatched.timelineOrder}</div>}
             </div>
             
@@ -195,32 +195,32 @@ export default function Home() {
       </div>
 
       {/* ROADMAP SECTION */}
-      <div className="bg-[#121316] border border-[#22242a] rounded-2xl p-8 shadow-xl">
+      <div className="bg-card border border-border rounded-2xl p-8 shadow-xl">
         {/* Roadmap Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
           <div className="flex items-center gap-3">
             <Filter className="w-5 h-5 text-[#e62429]" />
             <h2 className="text-xl font-bold font-heading uppercase tracking-widest">MCU Timeline Roadmap</h2>
-            <span className="bg-[#1e2025] border border-[#2c2f36] text-white text-[11px] font-bold px-3 py-1 rounded-full">{totalTitles} titles</span>
+            <span className="bg-muted border border-border text-foreground text-[11px] font-bold px-3 py-1 rounded-full">{totalTitles} titles</span>
           </div>
           
           <div className="flex items-center gap-6">
-            <label className="flex items-center gap-2 text-[13px] text-white font-medium cursor-pointer">
-              <input type="checkbox" checked={includeExtended} onChange={(e) => setIncludeExtended(e.target.checked)} className="rounded border-white/20 bg-black/50 accent-[#e62429]" />
+            <label className="flex items-center gap-2 text-[13px] text-foreground font-medium cursor-pointer">
+              <input type="checkbox" checked={includeExtended} onChange={(e) => setIncludeExtended(e.target.checked)} className="rounded border-border bg-black/50 accent-[#e62429]" />
               Include Extended TV (SHIELD, Agent Carter)
             </label>
             
             <div className="flex items-center gap-2 text-[13px]">
               <ArrowDownUp className="w-3.5 h-3.5 text-[#eab308]" />
-              <span className="text-text-secondary">Sort:</span>
+              <span className="text-muted-foreground">Sort:</span>
               <select 
                 value={sortBy} 
                 onChange={(e) => setSortBy(e.target.value as SortType)}
-                className="bg-transparent text-white font-bold focus:outline-none cursor-pointer"
+                className="bg-transparent text-foreground font-bold focus:outline-none cursor-pointer"
               >
-                <option value="timeline" className="bg-[#111113]">Timeline Order</option>
-                <option value="runtime" className="bg-[#111113]">Runtime</option>
-                <option value="alpha" className="bg-[#111113]">Alphabetical</option>
+                <option value="timeline" className="bg-muted">Timeline Order</option>
+                <option value="runtime" className="bg-muted">Runtime</option>
+                <option value="alpha" className="bg-muted">Alphabetical</option>
               </select>
             </div>
           </div>
@@ -254,10 +254,10 @@ export default function Home() {
               
               return (
                 <motion.div layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ duration: 0.2 }} key={item.id}>
-                  <div className="flex flex-col h-full rounded-2xl bg-[#111216] border border-[#22242a] overflow-hidden group">
+                  <div className="flex flex-col h-full rounded-2xl bg-card border border-border overflow-hidden group">
                     
                     {/* Poster Area */}
-                    <div className="relative w-full aspect-[2/3] flex flex-col items-center justify-center transition-colors overflow-hidden group/poster bg-[#090a0c]">
+                    <div className="relative w-full aspect-[2/3] flex flex-col items-center justify-center transition-colors overflow-hidden group/poster bg-muted">
                       
                       {item.posterUrl && (
                         <img 
@@ -282,8 +282,8 @@ export default function Home() {
                             {!item.posterUrl && (
                               <div className="flex flex-col items-center">
                                 <Film className="w-10 h-10 text-[#e62429] mb-3 opacity-80" />
-                                <h3 className="text-[13px] font-bold text-white text-center leading-tight mb-1">{item.title}</h3>
-                                <span className="text-[11px] text-text-secondary">{item.year}</span>
+                                <h3 className="text-[13px] font-bold text-foreground text-center leading-tight mb-1">{item.title}</h3>
+                                <span className="text-[11px] text-muted-foreground">{item.year}</span>
                               </div>
                             )}
                           </>
@@ -297,7 +297,7 @@ export default function Home() {
                           "absolute bottom-3 left-3 w-7 h-7 rounded-full backdrop-blur border flex items-center justify-center transition-colors z-20",
                           isFavorite 
                             ? "bg-[#e62429]/20 border-[#e62429]/50 text-[#e62429]" 
-                            : "bg-[#111216]/80 border-white/10 text-text-secondary hover:text-white"
+                            : "bg-card/80 border-border text-muted-foreground hover:text-foreground"
                         )}
                       >
                         <Heart className={cn("w-3.5 h-3.5", isFavorite && "fill-current")} />
@@ -312,15 +312,15 @@ export default function Home() {
                           {item.importance === "imp" ? (
                             <span className="bg-[#e62429]/20 text-[#e62429] text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">Important</span>
                           ) : (
-                            <span className="bg-white/10 text-text-secondary text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">Optional</span>
+                            <span className="bg-foreground/10 text-muted-foreground text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">Optional</span>
                           )}
                         </div>
-                        <span className="text-[11px] text-text-secondary">{saga}</span>
+                        <span className="text-[11px] text-muted-foreground">{saga}</span>
                       </div>
                       
-                      <h3 className="text-[15px] font-bold text-white leading-tight mb-2 line-clamp-1">{item.title}</h3>
+                      <h3 className="text-[15px] font-bold text-foreground leading-tight mb-2 line-clamp-1">{item.title}</h3>
                       
-                      <div className="flex items-center gap-2 text-[11px] text-text-secondary mb-4">
+                      <div className="flex items-center gap-2 text-[11px] text-muted-foreground mb-4">
                         <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {item.year}</span>
                         <span>•</span>
                         <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {item.runtime} min</span>
@@ -333,7 +333,7 @@ export default function Home() {
                             "w-full py-2 rounded-xl text-[13px] font-bold transition-colors flex items-center justify-center gap-2 border",
                             isWatched 
                               ? "bg-[#062413] border-[#104b27] text-[#22c55e] hover:bg-[#0a351c]" 
-                              : "bg-[#181a1f] border-[#2c2f36] text-white hover:bg-[#22242a]"
+                              : "bg-muted border-border text-foreground hover:bg-[#22242a]"
                           )}
                         >
                           {isWatched ? (
@@ -357,10 +357,10 @@ export default function Home() {
   );
 }
 
-function StatBlock({ icon, label, value, valueColor = "text-white" }: { icon: React.ReactNode, label: string, value: string, valueColor?: string }) {
+function StatBlock({ icon, label, value, valueColor = "text-foreground" }: { icon: React.ReactNode, label: string, value: string, valueColor?: string }) {
   return (
-    <div className="bg-[#0c0d10] border border-[#1e2025] rounded-xl p-4 flex flex-col justify-center">
-      <div className="flex items-center gap-1.5 text-[11px] text-text-secondary font-medium tracking-wide mb-1">
+    <div className="bg-[#0c0d10] border border-border rounded-xl p-4 flex flex-col justify-center">
+      <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground font-medium tracking-wide mb-1">
         {icon} {label}
       </div>
       <div className={cn("text-[17px] font-bold font-heading tracking-wide", valueColor)}>
@@ -378,7 +378,7 @@ function FilterPill({ icon, label, active, onClick }: { icon?: React.ReactNode, 
         "whitespace-nowrap flex items-center gap-2 px-4 py-1.5 rounded-full text-[12px] font-bold transition-all border",
         active 
           ? "bg-[#e62429] text-white border-[#e62429]" 
-          : "bg-[#181a1f] text-[#9ca3af] border-[#2c2f36] hover:text-white hover:border-[#4a4e59]"
+          : "bg-muted text-[#9ca3af] border-border hover:text-foreground hover:border-[#4a4e59]"
       )}
     >
       {icon}
