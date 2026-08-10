@@ -63,15 +63,15 @@ export function Navbar() {
           </div>
         </div>
 
-        {/* MIDDLE ACTIONS (Desktop Countdown + Mobile/Desktop Search) */}
-        <div className="flex w-full md:w-auto items-center gap-4 flex-1 justify-center">
-          {/* Countdown Pill (Hidden on Mobile) */}
-          <div className="hidden lg:flex items-center gap-2 bg-marvel-red/10 border border-marvel-red/20 rounded-full pl-1 pr-4 py-1 text-sm">
-            <div className="w-6 h-6 rounded-full bg-marvel-red/20 flex items-center justify-center text-marvel-red">
-              <Clock className="w-3.5 h-3.5" />
+        {/* MIDDLE ACTIONS */}
+        <div className="flex flex-col md:flex-row w-full md:w-auto items-center gap-3 md:gap-4 flex-1 justify-center">
+          {/* Countdown Pill */}
+          <div className="flex w-full md:w-auto justify-center items-center gap-2 bg-marvel-red/10 border border-marvel-red/20 rounded-full pl-1 pr-4 py-1 text-xs md:text-sm">
+            <div className="w-5 h-5 md:w-6 md:h-6 shrink-0 rounded-full bg-marvel-red/20 flex items-center justify-center text-marvel-red">
+              <Clock className="w-3 h-3 md:w-3.5 md:h-3.5" />
             </div>
-            <span className="text-muted-foreground">Doomsday in:</span>
-            <span className="font-mono text-marvel-red font-bold">
+            <span className="text-muted-foreground whitespace-nowrap">Doomsday in:</span>
+            <span className="font-mono text-marvel-red font-bold whitespace-nowrap">
               {mounted ? `${timeLeft.d}d ${timeLeft.h}h ${timeLeft.m}m ${timeLeft.s}s` : "Loading..."}
             </span>
           </div>
