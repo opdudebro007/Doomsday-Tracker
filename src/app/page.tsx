@@ -30,6 +30,7 @@ export default function Home() {
     minutesWatched,
     finishPaceDays,
     streak,
+    searchQuery,
   } = useTracker();
 
   const [activeFilter, setActiveFilter] = useState<FilterType>("all");
@@ -60,6 +61,15 @@ export default function Home() {
   const filteredAndSorted = useMemo(() => {
     let result = mcuTimeline;
     
+    // Filter by search query
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase().trim();
+      result = result.filter(i => 
+        i.title.toLowerCase().includes(q) || 
+        i.characters.some(c => c.toLowerCase().includes(q))
+      );
+    }
+    
     // Filter extended
     if (!includeExtended) {
       result = result.filter(i => !i.extended);
@@ -88,7 +98,7 @@ export default function Home() {
     });
 
     return result;
-  }, [activeFilter, sortBy, watchedIds, favoriteIds, includeExtended]);
+  }, [activeFilter, sortBy, watchedIds, favoriteIds, includeExtended, searchQuery]);
 
   if (!isHydrated || !prefsLoaded) return null;
 

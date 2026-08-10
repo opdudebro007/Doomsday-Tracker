@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { AVENGERS_DOOMSDAY_RELEASE_DATE } from "@/data/timeline";
 
 export function Navbar() {
-  const { overallProgress, streak } = useTracker();
+  const { overallProgress, streak, searchQuery, setSearchQuery } = useTracker();
   
   const calculateTimeLeft = () => {
     const target = new Date(AVENGERS_DOOMSDAY_RELEASE_DATE).getTime();
@@ -73,6 +73,8 @@ export function Navbar() {
             <input
               type="text"
               placeholder="Search title, character..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-muted border border-border rounded-full py-2 pl-9 pr-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-border transition-colors"
             />
           </div>

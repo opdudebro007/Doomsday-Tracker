@@ -10,6 +10,8 @@ interface TrackerContextType {
   toggleFavorite: (id: string) => void;
   resetProgress: () => void;
   isHydrated: boolean;
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
   
   // Computed stats
   totalTitles: number;
@@ -35,6 +37,7 @@ const TrackerContext = createContext<TrackerContextType | undefined>(undefined);
 export const TrackerProvider = ({ children }: { children: React.ReactNode }) => {
   const [watchedIds, setWatchedIds] = useState<string[]>([]);
   const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
+  const [searchQuery, setSearchQuery] = useState("");
   const [isHydrated, setIsHydrated] = useState(false);
 
   // Load from local storage on mount
@@ -125,31 +128,14 @@ export const TrackerProvider = ({ children }: { children: React.ReactNode }) => 
   const finishPaceDays = Math.ceil(totalRuntimeRemaining / (3 * 60));
 
   return (
-    <TrackerContext.Provider
-      value={{
-        watchedIds,
-        favoriteIds,
-        toggleWatched,
-        toggleFavorite,
-        resetProgress,
-        isHydrated,
-        totalTitles,
-        watchedTitlesCount,
-        overallProgress,
-        moviesWatched,
-        showsWatched,
-        totalMovies,
-        totalShows,
-        hoursWatched,
-        hoursRemaining,
-        minutesWatched,
-        minutesRemaining,
-        streak,
-        finishPaceDays,
-        nextUnwatched,
-        lastWatched
-      }}
-    >
+    <TrackerContext.Provider value={{
+      watchedIds, favoriteIds, toggleWatched, toggleFavorite, resetProgress, isHydrated,
+      searchQuery, setSearchQuery,
+      totalTitles, watchedTitlesCount, overallProgress,
+      moviesWatched, showsWatched, totalMovies, totalShows,
+      hoursWatched, minutesWatched, hoursRemaining, minutesRemaining,
+      streak, finishPaceDays, nextUnwatched, lastWatched
+    }}>
       {children}
     </TrackerContext.Provider>
   );
