@@ -26,7 +26,7 @@ export const mcuTimeline: MCUItem[] = [
     runtime: 340,
     timelineOrder: 2.1,
     extended: true,
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMjMwMTcxMTIyNV5BMl5BanBnXkFtZTgwMzc0OTc2MzE@._V1_SX300.jpg",
+    posterUrl: "/posters/agent-carter-s1.jpg",
     synopsis: "In 1946, Peggy Carter balances routine office work with secret missions for Howard Stark.",
     characters: [
       "Peggy Carter",
@@ -49,7 +49,7 @@ export const mcuTimeline: MCUItem[] = [
       "Bucky Barnes",
       "Red Skull"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BNzUyM2YyY2MtNzNlMS00MWU5LTgxNjAtNzZlNmI2NjU2NDZlXkEyXkFqcGc@._V1_QL75_UY562_CR8,0,380,562_.jpg"
+    posterUrl: "/posters/ca-first-avenger.jpg"
   },
   {
     id: "captain-marvel",
@@ -65,7 +65,7 @@ export const mcuTimeline: MCUItem[] = [
       "Nick Fury",
       "Talos"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BZDI1NGU2ODAtNzBiNy00MWY5LWIyMGEtZjUxZjUwZmZiNjBlXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/captain-marvel.jpg"
   },
   {
     id: "iron-man",
@@ -81,7 +81,7 @@ export const mcuTimeline: MCUItem[] = [
       "Pepper Potts",
       "Obadiah Stane"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/iron-man.jpg"
   },
   {
     id: "iron-man-2",
@@ -98,7 +98,7 @@ export const mcuTimeline: MCUItem[] = [
       "Natasha Romanoff",
       "Justin Hammer"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BYWYyOGQzOGYtMGQ1My00ZWYxLTgzZjktZWYzN2IwYjkxYzM0XkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg"
+    posterUrl: "/posters/iron-man-2.jpg"
   },
   {
     id: "incredible-hulk",
@@ -114,7 +114,7 @@ export const mcuTimeline: MCUItem[] = [
       "Betty Ross",
       "Emil Blonsky"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/incredible-hulk.jpg"
   },
   {
     id: "thor",
@@ -131,7 +131,7 @@ export const mcuTimeline: MCUItem[] = [
       "Jane Foster",
       "Odin"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BNjRhNGZjZjEtYTQzYS00OWUxLThjNGEtMTIwMTE2ZDFlZTZkXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/thor.jpg"
   },
   {
     id: "avengers",
@@ -151,7 +151,7 @@ export const mcuTimeline: MCUItem[] = [
       "Clint Barton",
       "Loki"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGc@._V1_SX300.jpg"
+    posterUrl: "/posters/avengers.jpg"
   },
   {
     id: "iron-man-3",
@@ -167,7 +167,7 @@ export const mcuTimeline: MCUItem[] = [
       "Pepper Potts",
       "Aldrich Killian"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMjIzMzAzMjQyM15BMl5BanBnXkFtZTcwNzM2NjcyOQ@@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/iron-man-3.jpg"
   },
   {
     id: "thor-dark-world",
@@ -184,7 +184,7 @@ export const mcuTimeline: MCUItem[] = [
       "Jane Foster",
       "Malekith"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMTQyNzAwOTUxOF5BMl5BanBnXkFtZTcwMTE0OTc5OQ@@._V1_QL75_UY562_CR7,0,380,562_.jpg"
+    posterUrl: "/posters/thor-dark-world.jpg"
   },
   {
     id: "ca-winter-soldier",
@@ -202,7 +202,7 @@ export const mcuTimeline: MCUItem[] = [
       "Sam Wilson",
       "Nick Fury"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BNWY1NjFmNDItZDhmOC00NjI1LWE0ZDItMTM0MjBjZThiOTQ2XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/ca-winter-soldier.jpg"
   },
   {
     id: "gotg",
@@ -221,7 +221,7 @@ export const mcuTimeline: MCUItem[] = [
       "Groot",
       "Ronan"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BM2ZmNjQ2MzAtNDlhNi00MmQyLWJhZDMtNmJiMjFlOWY4MzcxXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/gotg.jpg"
   },
   {
     id: "gotg-vol-2",
@@ -240,7 +240,7 @@ export const mcuTimeline: MCUItem[] = [
       "Groot",
       "Ego"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BNWE5MGI3MDctMmU5Ni00YzI2LWEzMTQtZGIyZDA5MzQzNDBhXkEyXkFqcGc@._V1_QL75_UX380_CR0,1,380,562_.jpg"
+    posterUrl: "/posters/gotg-vol-2.jpg"
   },
   {
     id: "avengers-aou",
@@ -259,7 +259,7 @@ export const mcuTimeline: MCUItem[] = [
       "Ultron",
       "Wanda Maximoff"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BODBhYTg1NGQtNGVmNS00ZTdiLThjYTYtZDFkNzRiNTZmNDZjXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/avengers-aou.jpg"
   },
   {
     id: "ant-man",
@@ -275,7 +275,7 @@ export const mcuTimeline: MCUItem[] = [
       "Hope van Dyne",
       "Hank Pym"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMjM2NTQ5Mzc2M15BMl5BanBnXkFtZTgwNTcxMDI2NTE@._V1_QL75_UX380_CR0,1,380,562_.jpg"
+    posterUrl: "/posters/ant-man.jpg"
   },
   {
     id: "ca-civil-war",
@@ -293,7 +293,7 @@ export const mcuTimeline: MCUItem[] = [
       "T'Challa",
       "Peter Parker"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/ca-civil-war.jpg"
   },
   {
     id: "black-widow",
@@ -309,7 +309,7 @@ export const mcuTimeline: MCUItem[] = [
       "Yelena Belova",
       "Alexei Shostakov"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BZTMyZTA0ZTItYjY3Yi00ODNjLWExYTgtYzgxZTk0NTg0Y2FlXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/black-widow.jpg"
   },
   {
     id: "black-panther",
@@ -326,7 +326,7 @@ export const mcuTimeline: MCUItem[] = [
       "Shuri",
       "Okoye"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/black-panther.jpg"
   },
   {
     id: "spider-man-homecoming",
@@ -343,7 +343,7 @@ export const mcuTimeline: MCUItem[] = [
       "Adrian Toomes",
       "Ned Leeds"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BODY2MTAzOTQ4M15BMl5BanBnXkFtZTgwNzg5MTE0MjI@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/spider-man-homecoming.jpg"
   },
   {
     id: "doctor-strange",
@@ -360,7 +360,7 @@ export const mcuTimeline: MCUItem[] = [
       "Mordo",
       "Ancient One"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/doctor-strange.jpg"
   },
   {
     id: "thor-ragnarok",
@@ -378,7 +378,7 @@ export const mcuTimeline: MCUItem[] = [
       "Valkyrie",
       "Bruce Banner"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMjMyNDkzMzI1OF5BMl5BanBnXkFtZTgwODcxODg5MjI@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/thor-ragnarok.jpg"
   },
   {
     id: "ant-man-wasp",
@@ -395,7 +395,7 @@ export const mcuTimeline: MCUItem[] = [
       "Hank Pym",
       "Janet van Dyne"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BODVkY2ZmZTAtYzFhMi00YzZlLWE2YWMtMDBiYjY2OTU4ZWM0XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/ant-man-wasp.jpg"
   },
   {
     id: "avengers-infinity-war",
@@ -414,7 +414,7 @@ export const mcuTimeline: MCUItem[] = [
       "Stephen Strange",
       "Peter Quill"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/avengers-infinity-war.jpg"
   },
   {
     id: "avengers-endgame",
@@ -435,7 +435,7 @@ export const mcuTimeline: MCUItem[] = [
       "Scott Lang",
       "Thanos"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/avengers-endgame.jpg"
   },
   {
     id: "loki-s1",
@@ -452,7 +452,7 @@ export const mcuTimeline: MCUItem[] = [
       "Sylvie",
       "He Who Remains"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BNDJkYzY3ZDUtZjFiYy00YmFiLWJmZTAtMzRlMDhlYWVmMzc2XkEyXkFqcGc@._V1_SX300.jpg"
+    posterUrl: "/posters/loki-s1.jpg"
   },
   {
     id: "wandavision",
@@ -469,7 +469,7 @@ export const mcuTimeline: MCUItem[] = [
       "Agatha Harkness",
       "Monica Rambeau"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BZTMxMmM1ODItMTZiMS00NjI1LWEwODctMjQ4ZjY4ODliNDI0XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg"
+    posterUrl: "/posters/wandavision.jpg"
   },
   {
     id: "shang-chi",
@@ -485,7 +485,7 @@ export const mcuTimeline: MCUItem[] = [
       "Katy",
       "Wenwu"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BZmY5MDcyNzAtYzg3MC00MGNlLTg3OGItNmRjYThkZGVlNzAyXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/shang-chi.jpg"
   },
   {
     id: "tfatws",
@@ -502,7 +502,7 @@ export const mcuTimeline: MCUItem[] = [
       "John Walker",
       "Zemo"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BYmJkOGNlNmEtMmQyOS00YjZiLTgxM2EtNmEzNzUzNTU5ODYwXkEyXkFqcGc@._V1_SX300.jpg"
+    posterUrl: "/posters/tfatws.jpg"
   },
   {
     id: "spider-man-ffh",
@@ -519,7 +519,7 @@ export const mcuTimeline: MCUItem[] = [
       "Nick Fury",
       "MJ"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMzNhNTE0NWQtN2E1Ny00NjcwLTg1YTctMGY1NmMwODJmY2NmXkEyXkFqcGc@._V1_QL75_UX380_CR0,1,380,562_.jpg"
+    posterUrl: "/posters/spider-man-ffh.jpg"
   },
   {
     id: "spider-man-nwh",
@@ -538,7 +538,7 @@ export const mcuTimeline: MCUItem[] = [
       "Green Goblin",
       "Doc Ock"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMmFiZGZjMmEtMTA0Ni00MzA2LTljMTYtZGI2MGJmZWYzZTQ2XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg"
+    posterUrl: "/posters/spider-man-nwh.jpg"
   },
   {
     id: "eternals",
@@ -561,7 +561,7 @@ export const mcuTimeline: MCUItem[] = [
       "Ajak",
       "Thena"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BZTBiZjI2M2UtZTNiNy00NmU4LWJiMjYtZjk4MDIzMzhlMjFlXkEyXkFqcGc@._V1_SX300.jpg"
+    posterUrl: "/posters/eternals.jpg"
   },
   {
     id: "hawkeye",
@@ -578,7 +578,7 @@ export const mcuTimeline: MCUItem[] = [
       "Yelena Belova",
       "Kingpin"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BOGU5ZDBlOTAtOTZmYS00MWE0LTg0NzktNDcxZGJhN2FhZmM2XkEyXkFqcGc@._V1_SX300.jpg"
+    posterUrl: "/posters/hawkeye.jpg"
   },
   {
     id: "doctor-strange-mom",
@@ -595,7 +595,7 @@ export const mcuTimeline: MCUItem[] = [
       "America Chavez",
       "Wong"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BN2YxZGRjMzYtZjE1ZC00MDI0LThjZmQtZTZmMzVmMmQ2NzBmXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/doctor-strange-mom.jpg"
   },
   {
     id: "moon-knight",
@@ -612,7 +612,7 @@ export const mcuTimeline: MCUItem[] = [
       "Arthur Harrow",
       "Khonshu"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BNDAzNmYwZjgtNDc3YS00ZDMyLTk0MjktMTg4MGNmNGU3MjlhXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/moon-knight.jpg"
   },
   {
     id: "ms-marvel",
@@ -628,7 +628,7 @@ export const mcuTimeline: MCUItem[] = [
       "Bruno",
       "Nakia"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BNzlkNjBmOWUtOTgzZS00OWIzLThkNWEtZTg5MGY2ODAyYzZjXkEyXkFqcGc@._V1_SX300.jpg"
+    posterUrl: "/posters/ms-marvel.jpg"
   },
   {
     id: "thor-love-thunder",
@@ -646,7 +646,7 @@ export const mcuTimeline: MCUItem[] = [
       "Valkyrie",
       "Korg"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BZjRiMDhiZjQtNjk5Yi00ZDcwLTkyYTEtMDc1NjdmNjFhNGIzXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/thor-love-thunder.jpg"
   },
   {
     id: "she-hulk",
@@ -663,7 +663,7 @@ export const mcuTimeline: MCUItem[] = [
       "Wong",
       "Emil Blonsky"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BNjg4ZTQ1MjctNzEyMS00YWM2LTk1ZTQtNDU3ZDJjNjhhMDhkXkEyXkFqcGc@._V1_SX300.jpg"
+    posterUrl: "/posters/she-hulk.jpg"
   },
   {
     id: "black-panther-wf",
@@ -681,7 +681,7 @@ export const mcuTimeline: MCUItem[] = [
       "Okoye",
       "Riri Williams"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BYWY5NDY1ZjItZDQxMy00MTAzLTgyOGQtNTQxYjFiMzZjMjUyXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/black-panther-wf.jpg"
   },
   {
     id: "ant-man-quantumania",
@@ -698,7 +698,7 @@ export const mcuTimeline: MCUItem[] = [
       "Kang the Conqueror",
       "Cassie Lang"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMThkYWY5ZjQtYjJlMS00MDFmLWFkYzEtODEzZjg5YWFmMGY4XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/ant-man-quantumania.jpg"
   },
   {
     id: "gotg-vol-3",
@@ -718,7 +718,7 @@ export const mcuTimeline: MCUItem[] = [
       "Drax",
       "Groot"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BOTJhOTMxMmItZmE0Ny00MDc3LWEzOGEtOGFkMzY4MWYyZDQ0XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/gotg-vol-3.jpg"
   },
   {
     id: "secret-invasion",
@@ -735,7 +735,7 @@ export const mcuTimeline: MCUItem[] = [
       "Gravik",
       "G'iah"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BNmYzYzA2NzMtOTVmMC00ZDY4LThlMDctZmUyN2NlMjQ2ODViXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/secret-invasion.jpg"
   },
   {
     id: "loki-s2",
@@ -753,7 +753,7 @@ export const mcuTimeline: MCUItem[] = [
       "O.B.",
       "Victor Timely"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMTY3NTUxNTAtNDFlMS00MGE5LWI5MmMtMTYwZmRjZjBmZmE3XkEyXkFqcGc@._V1_SX300.jpg"
+    posterUrl: "/posters/loki-s2.jpg"
   },
   {
     id: "the-marvels",
@@ -771,7 +771,7 @@ export const mcuTimeline: MCUItem[] = [
       "Nick Fury",
       "Dar-Benn"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BYzczOWM4MzItMWMyOS00ZDczLWIxMzctNzBmYTgzOTI1MzI3XkEyXkFqcGc@._V1_SX300.jpg"
+    posterUrl: "/posters/the-marvels.jpg"
   },
   {
     id: "echo",
@@ -787,7 +787,7 @@ export const mcuTimeline: MCUItem[] = [
       "Kingpin",
       "Daredevil"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BOGFiYzI1ZDctM2U1Zi00ZWI5LWFiMmQtNGU0NTU5MTg3OWM3XkEyXkFqcGc@._V1_SX300.jpg"
+    posterUrl: "/posters/echo.jpg"
   },
   {
     id: "deadpool-wolverine",
@@ -803,7 +803,7 @@ export const mcuTimeline: MCUItem[] = [
       "Wolverine",
       "Cassandra Nova"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BZTk5ODY0MmQtMzA3Ni00NGY1LThiYzItZThiNjFiNDM4MTM3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/deadpool-wolverine.jpg"
   },
   {
     id: "agatha-all-along",
@@ -819,7 +819,7 @@ export const mcuTimeline: MCUItem[] = [
       "Teen",
       "Rio Vidal"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMDcyZTNjOTEtNzc5Yy00Y2UzLThkMWYtNTY4YmM4OWI5OTMzXkEyXkFqcGc@._V1_SX300.jpg"
+    posterUrl: "/posters/agatha-all-along.jpg"
   },
   {
     id: "captain-america-bnw",
@@ -836,7 +836,7 @@ export const mcuTimeline: MCUItem[] = [
       "Thaddeus Ross",
       "The Leader"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BNDRjY2E0ZmEtN2QwNi00NTEwLWI3MWItODNkMGYwYWFjNGE0XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg"
+    posterUrl: "/posters/captain-america-bnw.jpg"
   },
   {
     id: "thunderbolts",
@@ -856,7 +856,7 @@ export const mcuTimeline: MCUItem[] = [
       "US Agent",
       "Valentina"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BNDIzNGUwZmYtODM0Yy00NjA3LTgxOGUtOTY0ZGM5MjBkM2I3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/thunderbolts.jpg"
   },
   {
     id: "fantastic-four",
@@ -874,7 +874,7 @@ export const mcuTimeline: MCUItem[] = [
       "Ben Grimm",
       "Galactus"
     ],
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BOGM5MzA3MDAtYmEwMi00ZDNiLTg4MDgtMTZjOTc0ZGMyNTIwXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+    posterUrl: "/posters/fantastic-four.jpg"
   }
 ];
 

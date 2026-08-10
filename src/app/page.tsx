@@ -135,8 +135,12 @@ export default function Home() {
               {nextUnwatched ? (
                 <div className="flex flex-col sm:flex-row gap-5 items-center">
                   {/* Poster Placeholder */}
-                  <div className="w-20 h-28 bg-[#1a1112] rounded-xl border border-[#3f1b1e] shrink-0 flex items-center justify-center">
-                    <Sparkles className="w-6 h-6 text-[#e62429] opacity-70" />
+                  <div className="w-20 h-28 bg-[#1a1112] rounded-xl border border-[#3f1b1e] shrink-0 flex items-center justify-center overflow-hidden">
+                    {nextUnwatched.posterUrl ? (
+                      <img src={nextUnwatched.posterUrl} alt={nextUnwatched.title} className="w-full h-full object-cover" />
+                    ) : (
+                      <Sparkles className="w-6 h-6 text-[#e62429] opacity-70" />
+                    )}
                   </div>
                   
                   <div className="flex-1 w-full">
