@@ -38,7 +38,7 @@ export default function TitleDetailPage({ params }: { params: Promise<{ id: stri
 
       <div className="flex flex-col md:flex-row gap-8 relative z-10">
         {/* Poster */}
-        <div className="w-full md:w-1/3 shrink-0">
+        <div className="w-3/4 sm:w-1/2 md:w-1/3 shrink-0 mx-auto md:mx-0">
           <div className="w-full aspect-[2/3] bg-card/40 backdrop-blur-md rounded-xl flex items-center justify-center border border-border/50 relative overflow-hidden shadow-2xl">
             {item.posterUrl ? (
               <img src={item.posterUrl} alt={item.title} className="absolute inset-0 w-full h-full object-cover" />

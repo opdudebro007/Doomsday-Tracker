@@ -36,10 +36,11 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky top-4 z-50 w-[calc(100%-2rem)] max-w-[1600px] mx-auto bg-background/60 backdrop-blur-2xl border border-border/50 rounded-2xl py-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-      <div className="px-6 flex items-center justify-between gap-4">
+    <nav className="sticky top-4 z-50 w-[calc(100%-1rem)] md:w-[calc(100%-2rem)] max-w-[1600px] mx-auto bg-background/60 backdrop-blur-2xl border border-border/50 rounded-2xl py-2 md:py-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+      <div className="px-4 md:px-6 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4">
         
-        {/* LOGO */}
+        <div className="flex items-center justify-between w-full md:w-auto">
+          {/* LOGO */}
         <Link href="/" className="flex flex-col">
           <div className="flex items-center gap-2">
             <div className="bg-[#e62429] text-white font-bold tracking-tighter px-2 py-0.5 text-lg leading-tight">
@@ -52,12 +53,20 @@ export function Navbar() {
           <span className="text-[10px] text-muted-foreground mt-0.5 tracking-wider">
             MCU Road to Avengers: Doomsday
           </span>
-        </Link>
+          </Link>
+          
+          {/* RIGHT ICONS ON MOBILE */}
+          <div className="flex md:hidden items-center gap-2">
+            <div className="bg-[#1a150e] border border-yellow-600/30 text-yellow-500 rounded-full px-2 py-1 text-[10px] font-bold flex items-center gap-1">
+              <Flame className="w-3 h-3" fill="currentColor" /> {streak}d
+            </div>
+          </div>
+        </div>
 
-        {/* MIDDLE ACTIONS */}
-        <div className="hidden lg:flex items-center gap-4 flex-1 justify-center">
-          {/* Countdown Pill */}
-          <div className="flex items-center gap-2 bg-marvel-red/10 border border-marvel-red/20 rounded-full pl-1 pr-4 py-1 text-sm">
+        {/* MIDDLE ACTIONS (Desktop Countdown + Mobile/Desktop Search) */}
+        <div className="flex w-full md:w-auto items-center gap-4 flex-1 justify-center">
+          {/* Countdown Pill (Hidden on Mobile) */}
+          <div className="hidden lg:flex items-center gap-2 bg-marvel-red/10 border border-marvel-red/20 rounded-full pl-1 pr-4 py-1 text-sm">
             <div className="w-6 h-6 rounded-full bg-marvel-red/20 flex items-center justify-center text-marvel-red">
               <Clock className="w-3.5 h-3.5" />
             </div>
@@ -68,7 +77,7 @@ export function Navbar() {
           </div>
 
           {/* Search */}
-          <div className="relative w-64 xl:w-80">
+          <div className="relative w-full md:w-64 xl:w-80">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
             <input
               type="text"
@@ -81,9 +90,10 @@ export function Navbar() {
         </div>
 
         {/* RIGHT ICONS */}
-        <div className="flex items-center gap-2">
+        {/* RIGHT ICONS ON DESKTOP */}
+        <div className="hidden md:flex items-center gap-2">
           {/* Streak */}
-          <div className="hidden md:flex items-center gap-1.5 bg-[#1a150e] border border-yellow-600/30 text-yellow-500 rounded-full px-3 py-1.5 text-xs font-bold">
+          <div className="flex items-center gap-1.5 bg-[#1a150e] border border-yellow-600/30 text-yellow-500 rounded-full px-3 py-1.5 text-xs font-bold">
             <Flame className="w-3.5 h-3.5" fill="currentColor" /> {streak}d
           </div>
           

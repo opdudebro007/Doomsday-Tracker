@@ -103,10 +103,10 @@ export default function Home() {
   if (!isHydrated || !prefsLoaded) return null;
 
   return (
-    <div className="container mx-auto px-6 py-8 max-w-[1600px]">
+    <div className="container mx-auto px-4 md:px-6 py-4 md:py-8 max-w-[1600px]">
       
       {/* TOP DASHBOARD AREA */}
-      <div className="bg-card/40 backdrop-blur-2xl border border-border/50 rounded-2xl p-8 mb-10 shadow-2xl relative overflow-hidden">
+      <div className="bg-card/40 backdrop-blur-2xl border border-border/50 rounded-2xl p-5 md:p-8 mb-10 shadow-2xl relative overflow-hidden">
         {/* Intense Glassmorphism Ambient Glows */}
         <div className="absolute top-[-10%] left-[10%] w-[500px] h-[500px] bg-marvel-red/20 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-blue-500/15 rounded-full blur-[120px] pointer-events-none"></div>
@@ -116,7 +116,7 @@ export default function Home() {
           
           {/* LEFT PROGRESS CARD */}
           <div className="xl:w-1/3 flex flex-col items-center justify-center pt-4">
-            <div className="relative flex items-center justify-center mb-10">
+            <div className="relative flex items-center justify-center mb-6 md:mb-10 scale-[0.8] md:scale-100 origin-center">
               <svg height="220" width="220" className="transform -rotate-90">
                 <circle stroke="#222" fill="transparent" strokeWidth="16" r="95" cx="110" cy="110" />
                 <circle
@@ -207,7 +207,7 @@ export default function Home() {
       </div>
 
       {/* ROADMAP SECTION */}
-      <div className="bg-card/40 backdrop-blur-2xl border border-border/50 rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+      <div className="bg-card/40 backdrop-blur-2xl border border-border/50 rounded-2xl p-5 md:p-8 shadow-2xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-marvel-red/10 rounded-full blur-[100px] pointer-events-none"></div>
         
