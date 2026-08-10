@@ -28,27 +28,31 @@ export default function TitleDetailPage({ params }: { params: Promise<{ id: stri
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <Link href="/timeline" className="inline-flex items-center gap-2 text-text-secondary hover:text-white transition-colors mb-8">
-        <ArrowLeft className="w-4 h-4" /> Back to Timeline
+      <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 font-medium">
+        <ArrowLeft className="w-4 h-4" /> Back to Dashboard
       </Link>
 
       <div className="flex flex-col md:flex-row gap-8">
         {/* Poster */}
         <div className="w-full md:w-1/3 shrink-0">
-          <div className="w-full aspect-[2/3] bg-black/40 rounded-xl flex items-center justify-center border border-white/10 relative overflow-hidden shadow-2xl">
+          <div className="w-full aspect-[2/3] bg-muted rounded-xl flex items-center justify-center border border-border relative overflow-hidden shadow-2xl">
+            {item.posterUrl ? (
+              <img src={item.posterUrl} alt={item.title} className="absolute inset-0 w-full h-full object-cover" />
+            ) : (
+              <span className="text-sm text-muted-foreground relative z-0">Poster</span>
+            )}
             {isWatched && (
-              <div className="absolute inset-0 bg-black/60 flex items-center justify-center backdrop-blur-sm z-10">
+              <div className="absolute inset-0 bg-background/60 flex items-center justify-center backdrop-blur-sm z-10">
                 <CheckCircle2 className="w-16 h-16 text-green-500" />
               </div>
             )}
-            <span className="text-sm text-text-secondary">Poster</span>
           </div>
           
           <button
             onClick={() => toggleWatched(item.id)}
             className={`w-full mt-6 py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors ${
               isWatched 
-                ? "bg-white/10 text-white hover:bg-white/20" 
+                ? "bg-foreground/10 text-foreground hover:bg-foreground/20" 
                 : "bg-marvel-red text-white hover:bg-marvel-dark-red"
             }`}
           >
@@ -72,21 +76,21 @@ export default function TitleDetailPage({ params }: { params: Promise<{ id: stri
             {item.title}
           </h1>
           
-          <div className="flex flex-wrap gap-4 text-sm text-text-secondary mb-8">
-            <span className="bg-white/10 px-3 py-1.5 rounded flex items-center gap-2 text-white">
+          <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-8">
+            <span className="bg-foreground/10 px-3 py-1.5 rounded flex items-center gap-2 text-foreground font-medium">
               <Calendar className="w-4 h-4" /> {item.year}
             </span>
-            <span className="bg-white/10 px-3 py-1.5 rounded flex items-center gap-2 text-white">
+            <span className="bg-foreground/10 px-3 py-1.5 rounded flex items-center gap-2 text-foreground font-medium">
               <Clock className="w-4 h-4" /> {item.runtime} min
             </span>
-            <span className="bg-white/10 px-3 py-1.5 rounded text-white capitalize">
+            <span className="bg-foreground/10 px-3 py-1.5 rounded text-foreground font-medium capitalize">
               {item.type}
             </span>
           </div>
 
           <Card className="p-6 mb-8">
             <h2 className="text-xl font-bold font-heading mb-4">Synopsis</h2>
-            <p className="text-text-secondary leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed">
               {item.synopsis}
             </p>
           </Card>
@@ -95,15 +99,28 @@ export default function TitleDetailPage({ params }: { params: Promise<{ id: stri
             <h2 className="text-xl font-bold font-heading mb-4">Main Characters</h2>
             <div className="flex flex-wrap gap-2">
               {item.characters.map((char, idx) => (
-                <span key={idx} className="bg-white/5 border border-white/10 px-3 py-1.5 rounded-full text-sm">
+                <span key={idx} className="bg-foreground/5 border border-border px-3 py-1.5 rounded-full text-sm font-medium">
                   {char}
                 </span>
               ))}
             </div>
           </Card>
           
+          <Card className="p-6 mb-8 mt-8">
+            <h2 className="text-xl font-bold font-heading mb-4">Where to Watch</h2>
+            <div className="flex gap-4">
+               {item.phase === "Legacy" ? (
+                  <span className="px-4 py-2 bg-foreground/5 border border-border rounded-lg text-sm font-bold flex items-center gap-2">Vudu / Prime Video</span>
+               ) : item.year >= 2025 ? (
+                  <span className="px-4 py-2 bg-foreground/5 border border-border rounded-lg text-sm font-bold flex items-center gap-2">In Theaters</span>
+               ) : (
+                  <span className="px-4 py-2 bg-[#001489] text-white rounded-lg text-sm font-bold flex items-center gap-2">Disney+</span>
+               )}
+            </div>
+          </Card>
+          
           <div className="mt-8">
-            <button className="flex items-center gap-2 text-text-secondary hover:text-white transition-colors">
+            <button className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors font-medium">
               <PlayCircle className="w-5 h-5 text-marvel-red" /> Watch Trailer
             </button>
           </div>

@@ -257,7 +257,7 @@ export default function Home() {
                   <div className="flex flex-col h-full rounded-2xl bg-card border border-border overflow-hidden group">
                     
                     {/* Poster Area */}
-                    <div className="relative w-full aspect-[2/3] flex flex-col items-center justify-center transition-colors overflow-hidden group/poster bg-muted">
+                    <Link href={`/title/${item.id}`} className="relative w-full aspect-[2/3] flex flex-col items-center justify-center transition-colors overflow-hidden group/poster bg-muted">
                       
                       {item.posterUrl && (
                         <img 
@@ -302,7 +302,7 @@ export default function Home() {
                       >
                         <Heart className={cn("w-3.5 h-3.5", isFavorite && "fill-current")} />
                       </button>
-                    </div>
+                    </Link>
 
                     {/* Details Area */}
                     <div className="p-4 flex flex-col flex-1">
