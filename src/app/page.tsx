@@ -120,23 +120,23 @@ export default function Home() {
               <svg height="220" width="220" className="transform -rotate-90">
                 <circle stroke="#222" fill="transparent" strokeWidth="16" r="95" cx="110" cy="110" />
                 <circle
-                  className="text-[#22c55e] transition-all duration-1000 ease-out"
+                  className="text-[#15803d] transition-all duration-1000 ease-out"
                   stroke="currentColor" fill="transparent" strokeWidth="16"
                   strokeDasharray={95 * 2 * Math.PI}
                   strokeDashoffset={(95 * 2 * Math.PI) - ((overallProgress / 100) * (95 * 2 * Math.PI))}
                   strokeLinecap="round" r="95" cx="110" cy="110"
-                  style={{ filter: "drop-shadow(0 0 12px rgba(34, 197, 94,0.6))" }}
+                  style={{ filter: "drop-shadow(0 0 12px rgba(21, 128, 61,0.6))" }}
                 />
               </svg>
               <div className="absolute flex flex-col items-center justify-center text-center">
                 <span className="text-[52px] font-bold font-heading leading-tight">{overallProgress}%</span>
                 <span className="text-[10px] font-bold text-muted-foreground tracking-[0.2em] mt-1">OVERALL PROGRESS</span>
-                <span className="text-[13px] font-bold text-[#22c55e] mt-1 tracking-wide">{watchedTitlesCount} / {totalTitles} Done</span>
+                <span className="text-[13px] font-bold text-[#15803d] mt-1 tracking-wide">{watchedTitlesCount} / {totalTitles} Done</span>
               </div>
             </div>
             
             <div className="w-full max-w-[280px] bg-muted h-2 rounded-full overflow-hidden">
-              <div className="bg-gradient-to-r from-orange-500 to-[#22c55e] h-full rounded-full relative" style={{ width: `${overallProgress}%` }}>
+              <div className="bg-gradient-to-r from-orange-500 to-[#15803d] h-full rounded-full relative" style={{ width: `${overallProgress}%` }}>
                 <div className="absolute right-0 top-0 bottom-0 w-4 bg-white/30 blur-[2px]"></div>
               </div>
             </div>
@@ -154,13 +154,13 @@ export default function Home() {
                     {nextUnwatched.posterUrl ? (
                       <img src={nextUnwatched.posterUrl} alt={nextUnwatched.title} className="w-full h-full object-cover" />
                     ) : (
-                      <Sparkles className="w-6 h-6 text-[#22c55e] opacity-70" />
+                      <Sparkles className="w-6 h-6 text-[#15803d] opacity-70" />
                     )}
                   </div>
                   
                   <div className="flex-1 w-full">
                     <div className="flex items-center gap-3 mb-2">
-                      <span className="bg-[#22c55e] text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider uppercase">
+                      <span className="bg-[#15803d] text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider uppercase">
                         UP NEXT • TIMELINE #{nextUnwatched.timelineOrder}
                       </span>
                       <span className="text-xs text-muted-foreground font-medium">{nextUnwatched.runtime} min</span>
@@ -172,7 +172,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex items-center gap-3 shrink-0 sm:self-end sm:mb-2">
-                    <button className="bg-[#22c55e] hover:bg-[#22c55e]/80 text-white font-bold py-2.5 px-6 rounded-full flex items-center gap-2 transition-colors shadow-[0_0_20px_rgba(34, 197, 94,0.3)]">
+                    <button className="bg-[#15803d] hover:bg-[#15803d]/80 text-white font-bold py-2.5 px-6 rounded-full flex items-center gap-2 transition-colors shadow-[0_0_20px_rgba(21, 128, 61,0.3)]">
                       <Play className="w-4 h-4 fill-current" /> Continue
                     </button>
                     <button 
@@ -191,7 +191,7 @@ export default function Home() {
             {/* 4 STAT BLOCKS */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <StatBlock icon={<Clock className="w-4 h-4 text-[#3b82f6]" />} label="Remaining" value={`${hoursRemaining}h ${minutesRemaining}m`} />
-              <StatBlock icon={<CheckCircle2 className="w-4 h-4 text-[#22c55e]" />} label="Completed" value={`${hoursWatched}h ${minutesWatched}m`} />
+              <StatBlock icon={<CheckCircle2 className="w-4 h-4 text-[#15803d]" />} label="Completed" value={`${hoursWatched}h ${minutesWatched}m`} />
               <StatBlock icon={<Calendar className="w-4 h-4 text-[#eab308]" />} label="Finish Pace" value={`~${finishPaceDays} Days`} />
               <StatBlock icon={<Flame className="w-4 h-4 text-[#f97316]" />} label="Streak" value={`${streak} Days`} valueColor="text-[#eab308]" />
             </div>
@@ -199,7 +199,7 @@ export default function Home() {
             {/* LAST WATCHED FOOTER */}
             <div className="flex justify-between items-center text-[13px] px-2 mt-2">
               <div className="text-muted-foreground font-medium">Last Watched: <span className="text-foreground font-bold">{lastWatched?.title || "None"}</span></div>
-              {lastWatched && <div className="text-[#22c55e] font-bold tracking-wide">Timeline #{lastWatched.timelineOrder}</div>}
+              {lastWatched && <div className="text-[#15803d] font-bold tracking-wide">Timeline #{lastWatched.timelineOrder}</div>}
             </div>
             
           </div>
@@ -214,14 +214,14 @@ export default function Home() {
         {/* Roadmap Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 relative z-10">
           <div className="flex items-center gap-3">
-            <Filter className="w-5 h-5 text-[#22c55e]" />
+            <Filter className="w-5 h-5 text-[#15803d]" />
             <h2 className="text-xl font-bold font-heading uppercase tracking-widest">MCU Timeline Roadmap</h2>
             <span className="bg-muted border border-border text-foreground text-[11px] font-bold px-3 py-1 rounded-full">{totalTitles} titles</span>
           </div>
           
           <div className="flex items-center gap-6">
             <label className="flex items-center gap-2 text-[13px] text-foreground font-medium cursor-pointer">
-              <input type="checkbox" checked={includeExtended} onChange={(e) => setIncludeExtended(e.target.checked)} className="rounded border-border bg-black/50 accent-[#22c55e]" />
+              <input type="checkbox" checked={includeExtended} onChange={(e) => setIncludeExtended(e.target.checked)} className="rounded border-border bg-black/50 accent-[#15803d]" />
               Include Extended TV (SHIELD, Agent Carter)
             </label>
             
@@ -270,7 +270,7 @@ export default function Home() {
               return (
                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ duration: 0.2 }} key={item.id}>
                   <TiltCard>
-                    <div className="flex flex-col h-full rounded-2xl bg-card/40 backdrop-blur-md border border-border/50 overflow-hidden group shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(34, 197, 94,0.15)] transition-all duration-300 relative">
+                    <div className="flex flex-col h-full rounded-2xl bg-card/40 backdrop-blur-md border border-border/50 overflow-hidden group shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(21, 128, 61,0.15)] transition-all duration-300 relative">
                     
                     {/* Poster Area */}
                     <Link href={`/title/${item.id}`} className="relative w-full aspect-[2/3] flex flex-col items-center justify-center transition-colors overflow-hidden group/poster bg-muted">
@@ -290,16 +290,16 @@ export default function Home() {
                       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full p-4">
                         {isWatched ? (
                           <>
-                            <div className="w-12 h-12 rounded-full bg-[#22c55e] flex items-center justify-center mt-auto mb-2 shadow-[0_0_15px_rgba(34,197,94,0.4)]">
+                            <div className="w-12 h-12 rounded-full bg-[#15803d] flex items-center justify-center mt-auto mb-2 shadow-[0_0_15px_rgba(21, 128, 61,0.4)]">
                               <Check className="w-8 h-8 text-[#081a11] stroke-[3]" />
                             </div>
-                            <span className="text-[11px] font-bold text-[#22c55e] tracking-widest mt-auto">WATCHED</span>
+                            <span className="text-[11px] font-bold text-[#15803d] tracking-widest mt-auto">WATCHED</span>
                           </>
                         ) : (
                           <>
                             {!item.posterUrl && (
                               <div className="flex flex-col items-center">
-                                <Film className="w-10 h-10 text-[#22c55e] mb-3 opacity-80" />
+                                <Film className="w-10 h-10 text-[#15803d] mb-3 opacity-80" />
                                 <h3 className="text-[13px] font-bold text-foreground text-center leading-tight mb-1">{item.title}</h3>
                                 <span className="text-[11px] text-muted-foreground">{item.year}</span>
                               </div>
@@ -314,7 +314,7 @@ export default function Home() {
                         className={cn(
                           "absolute bottom-3 left-3 w-7 h-7 rounded-full backdrop-blur border flex items-center justify-center transition-colors z-20",
                           isFavorite 
-                            ? "bg-[#22c55e]/20 border-[#22c55e]/50 text-[#22c55e]" 
+                            ? "bg-[#15803d]/20 border-[#15803d]/50 text-[#15803d]" 
                             : "bg-card/80 border-border text-muted-foreground hover:text-foreground"
                         )}
                       >
@@ -328,7 +328,7 @@ export default function Home() {
                         <div className="flex items-center gap-2">
                           <span className="text-[11px] font-bold text-[#eab308]">Phase {item.phase}</span>
                           {item.importance === "imp" ? (
-                            <span className="bg-[#22c55e]/20 text-[#22c55e] text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">Important</span>
+                            <span className="bg-[#15803d]/20 text-[#15803d] text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">Important</span>
                           ) : (
                             <span className="bg-foreground/10 text-muted-foreground text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">Optional</span>
                           )}
@@ -350,7 +350,7 @@ export default function Home() {
                           className={cn(
                             "w-full py-2 rounded-xl text-[13px] font-bold transition-colors flex items-center justify-center gap-2 border",
                             isWatched 
-                              ? "bg-[#062413] border-[#104b27] text-[#22c55e] hover:bg-[#0a351c]" 
+                              ? "bg-[#062413] border-[#104b27] text-[#15803d] hover:bg-[#0a351c]" 
                               : "bg-muted border-border text-foreground hover:bg-[#22242a]"
                           )}
                         >
@@ -395,7 +395,7 @@ function FilterPill({ icon, label, active, onClick }: { icon?: React.ReactNode, 
       className={cn(
         "whitespace-nowrap flex items-center gap-2 px-4 py-1.5 rounded-full text-[12px] font-bold transition-all border",
         active 
-          ? "bg-[#22c55e] text-white border-[#22c55e]" 
+          ? "bg-[#15803d] text-white border-[#15803d]" 
           : "bg-muted text-muted-foreground border-border hover:text-foreground hover:border-foreground/30"
       )}
     >

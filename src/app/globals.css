@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-doomsday-green: #22c55e;
-  --color-doomsday-dark-green: #15803d;
+  --color-doomsday-green: #15803d;
+  --color-doomsday-dark-green: #14532d;
   --color-background: var(--bg);
   --color-card: var(--card);
   --color-card-border: var(--border);
@@ -37,8 +37,8 @@
 
 body {
   background-color: var(--color-background);
-  background-image: radial-gradient(circle at top right, rgba(34, 197, 94,0.05), transparent 40%),
-                    radial-gradient(circle at bottom left, rgba(34, 197, 94,0.05), transparent 40%);
+  background-image: radial-gradient(circle at top right, rgba(21, 128, 61,0.05), transparent 40%),
+                    radial-gradient(circle at bottom left, rgba(21, 128, 61,0.05), transparent 40%);
   color: var(--color-foreground);
   font-family: var(--font-sans), sans-serif;
   overflow-x: hidden;
@@ -54,11 +54,11 @@ body {
 }
 
 .doomsday-glow {
-  box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
+  box-shadow: 0 0 15px rgba(21, 128, 61, 0.4);
 }
 
 .doomsday-glow:hover {
-  box-shadow: 0 0 25px rgba(34, 197, 94, 0.6);
+  box-shadow: 0 0 25px rgba(21, 128, 61, 0.6);
 }
 
 ::-webkit-scrollbar {

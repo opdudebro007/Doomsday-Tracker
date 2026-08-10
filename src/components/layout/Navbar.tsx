@@ -43,11 +43,11 @@ export function Navbar() {
           {/* LOGO */}
         <Link href="/" className="flex flex-col">
           <div className="flex items-center gap-2">
-            <div className="bg-[#22c55e] text-white font-bold tracking-tighter px-2 py-0.5 text-lg leading-tight">
+            <div className="bg-[#15803d] text-white font-bold tracking-tighter px-2 py-0.5 text-lg leading-tight">
               MARVEL
             </div>
             <span className="font-heading font-bold text-xl tracking-wide uppercase">
-              DOOMSDAY <span className="text-[#22c55e]">TRACKER</span>
+              DOOMSDAY <span className="text-[#15803d]">TRACKER</span>
             </span>
           </div>
           <span className="text-[10px] text-muted-foreground mt-0.5 tracking-wider">
