@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type FilterType = "all" | "imp" | "optional" | "movies" | "shows" | "watched" | "unwatched" | "favorites" | "phase1" | "phase2" | "phase3" | "phase4" | "phase5" | "phase6";
+type FilterType = "all" | "imp" | "optional" | "legacy" | "movies" | "shows" | "watched" | "unwatched" | "favorites" | "phase1" | "phase2" | "phase3" | "phase4" | "phase5" | "phase6";
 type SortType = "timeline" | "runtime" | "alpha" | "newest" | "oldest";
 
 export default function Home() {
@@ -66,6 +66,7 @@ export default function Home() {
     
     if (activeFilter === "imp") result = result.filter(i => i.importance === "imp");
     if (activeFilter === "optional") result = result.filter(i => i.importance === "optional");
+    if (activeFilter === "legacy") result = result.filter(i => i.phase === "Legacy");
     if (activeFilter === "movies") result = result.filter(i => i.type === "movie");
     if (activeFilter === "shows") result = result.filter(i => i.type === "show");
     if (activeFilter === "watched") result = result.filter(i => watchedIds.includes(i.id));
@@ -228,6 +229,7 @@ export default function Home() {
         {/* Filter Pills */}
         <div className="flex gap-2.5 overflow-x-auto pb-4 scrollbar-hide mb-6 items-center">
           <FilterPill label="All Projects" active={activeFilter === "all"} onClick={() => setActiveFilter("all")} />
+          <FilterPill label="Legacy (Fox/Sony)" active={activeFilter === "legacy"} onClick={() => setActiveFilter("legacy")} />
           <FilterPill icon={<Flame className="w-3.5 h-3.5" />} label="Important" active={activeFilter === "imp"} onClick={() => setActiveFilter("imp")} />
           <FilterPill label="Optional" active={activeFilter === "optional"} onClick={() => setActiveFilter("optional")} />
           <FilterPill icon={<Film className="w-3.5 h-3.5" />} label="Movies" active={activeFilter === "movies"} onClick={() => setActiveFilter("movies")} />
