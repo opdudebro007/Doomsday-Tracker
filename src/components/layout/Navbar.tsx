@@ -67,7 +67,7 @@ export function Navbar() {
         {/* MIDDLE ACTIONS */}
         <div className="flex flex-col md:flex-row w-full md:w-auto items-center gap-3 md:gap-4 flex-1 justify-center">
           {/* Countdown Pill */}
-          <div className="flex w-full md:w-auto justify-center items-center gap-2 bg-doomsday-green/10 border border-doomsday-green/20 rounded-full pl-1 pr-4 py-1 text-xs md:text-sm">
+          <Tilt className="flex w-full md:w-auto justify-center items-center gap-2 bg-doomsday-green/10 border border-doomsday-green/20 rounded-full pl-1 pr-4 py-1 text-xs md:text-sm z-20" rotation={8} timing={100}>
             <div className="w-5 h-5 md:w-6 md:h-6 shrink-0 rounded-full bg-doomsday-green/20 flex items-center justify-center text-doomsday-green">
               <Clock className="w-3 h-3 md:w-3.5 md:h-3.5" />
             </div>
@@ -75,7 +75,7 @@ export function Navbar() {
             <span className="font-mono text-doomsday-green font-bold whitespace-nowrap">
               {mounted ? `${timeLeft.d}d ${timeLeft.h}h ${timeLeft.m}m ${timeLeft.s}s` : "Loading..."}
             </span>
-          </div>
+          </Tilt>
 
           {/* Search */}
           <Tilt className="relative w-full md:w-64 xl:w-80 z-20" rotation={8} timing={100}>
@@ -94,9 +94,11 @@ export function Navbar() {
         {/* RIGHT ICONS ON DESKTOP */}
         <div className="hidden md:flex items-center gap-2">
           {/* Streak */}
-          <div className="flex items-center gap-1.5 bg-[#1a150e] border border-yellow-600/30 text-yellow-500 rounded-full px-3 py-1.5 text-xs font-bold">
-            <Flame className="w-3.5 h-3.5" fill="currentColor" /> {streak}d
-          </div>
+          <Tilt rotation={15} timing={100}>
+            <div className="flex items-center gap-1.5 bg-[#1a150e] border border-yellow-600/30 text-yellow-500 rounded-full px-3 py-1.5 text-xs font-bold">
+              <Flame className="w-3.5 h-3.5" fill="currentColor" /> {streak}d
+            </div>
+          </Tilt>
           
           <button className="w-9 h-9 flex items-center justify-center rounded-full bg-muted border border-border text-[#5cb85c] hover:bg-foreground/5 transition-colors">
             <Shuffle className="w-4 h-4" />
@@ -106,10 +108,12 @@ export function Navbar() {
             <Trophy className="w-4 h-4" />
           </button>
           
-          <Link href="/stats" className="hidden md:flex items-center gap-2 rounded-full bg-doomsday-green/10 border border-doomsday-green/20 hover:bg-doomsday-green/20 transition-colors px-3 py-1.5 text-doomsday-green text-xs font-bold">
-            <div className="w-4 h-4 rounded-full border-2 border-current border-t-transparent animate-spin-slow"></div>
-            Stats <span className="bg-doomsday-green text-white px-1.5 py-0.5 rounded-full text-[10px]">{overallProgress}%</span>
-          </Link>
+          <Tilt rotation={15} timing={100}>
+            <Link href="/stats" className="hidden md:flex items-center gap-2 rounded-full bg-doomsday-green/10 border border-doomsday-green/20 hover:bg-doomsday-green/20 transition-colors px-3 py-1.5 text-doomsday-green text-xs font-bold">
+              <div className="w-4 h-4 rounded-full border-2 border-current border-t-transparent animate-spin-slow"></div>
+              Stats <span className="bg-doomsday-green text-white px-1.5 py-0.5 rounded-full text-[10px]">{overallProgress}%</span>
+            </Link>
+          </Tilt>
 
           <button className="w-9 h-9 flex items-center justify-center rounded-full bg-muted border border-border text-muted-foreground hover:text-foreground hover:bg-foreground/5 transition-colors">
             <Share2 className="w-4 h-4" />

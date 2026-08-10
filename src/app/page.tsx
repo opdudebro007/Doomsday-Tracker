@@ -378,14 +378,14 @@ export default function Home() {
 
 function StatBlock({ icon, label, value, valueColor = "text-foreground" }: { icon: React.ReactNode, label: string, value: string, valueColor?: string }) {
   return (
-    <div className="bg-card/40 backdrop-blur-md border border-border/50 rounded-xl p-4 flex flex-col justify-center shadow-lg">
+    <Tilt className="bg-card/40 backdrop-blur-md border border-border/50 rounded-xl p-4 flex flex-col justify-center shadow-lg" rotation={10} timing={100}>
       <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground font-medium tracking-wide mb-1">
         {icon} {label}
       </div>
       <div className={cn("text-[17px] font-bold font-heading tracking-wide", valueColor)}>
         {value}
       </div>
-    </div>
+    </Tilt>
   );
 }
 
