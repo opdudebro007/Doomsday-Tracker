@@ -120,9 +120,14 @@ export default function TitleDetailPage({ params }: { params: Promise<{ id: stri
           </Card>
           
           <div className="mt-8">
-            <button className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors font-medium">
+            <a 
+              href={`https://www.youtube.com/results?search_query=${encodeURIComponent(item.title + ' official trailer')}`} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors font-medium"
+            >
               <PlayCircle className="w-5 h-5 text-marvel-red" /> Watch Trailer
-            </button>
+            </a>
           </div>
         </div>
       </div>
