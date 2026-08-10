@@ -121,7 +121,7 @@ export default function TitleDetailPage({ params }: { params: Promise<{ id: stri
           
           <div className="mt-8">
             <a 
-              href={`https://www.youtube.com/results?search_query=${encodeURIComponent(item.title + ' official trailer')}`} 
+              href={item.trailerUrl || `https://www.youtube.com/results?search_query=${encodeURIComponent(item.title + ' official trailer')}`} 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors font-medium"

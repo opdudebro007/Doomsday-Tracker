@@ -10,6 +10,7 @@ export interface MCUItem {
   runtime: number; // in minutes (total for shows)
   timelineOrder: number;
   posterUrl?: string;
+  trailerUrl?: string;
   extended?: boolean;
   importance?: "imp" | "optional";
   synopsis: string;
@@ -29,7 +30,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.01,
     characters: [],
-    posterUrl: "/posters/blade-1.jpg"
+    posterUrl: "/posters/blade-1.jpg",
+    trailerUrl: "https://youtube.com/watch?v=basLDO2bj2k"
   },
   {
     id: "x-men",
@@ -42,7 +44,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.02,
     characters: [],
-    posterUrl: "/posters/x-men.jpg"
+    posterUrl: "/posters/x-men.jpg",
+    trailerUrl: "https://youtube.com/watch?v=mfUtseK27pc"
   },
   {
     id: "blade-2",
@@ -55,7 +58,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.03,
     characters: [],
-    posterUrl: "/posters/blade-2.jpg"
+    posterUrl: "/posters/blade-2.jpg",
+    trailerUrl: "https://youtube.com/watch?v=vAUB7dcUn8o"
   },
   {
     id: "spider-man-1",
@@ -68,7 +72,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.04,
     characters: [],
-    posterUrl: "/posters/spider-man-1.jpg"
+    posterUrl: "/posters/spider-man-1.jpg",
+    trailerUrl: "https://youtube.com/watch?v=62bIsvRcPv0"
   },
   {
     id: "x2",
@@ -81,7 +86,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.05,
     characters: [],
-    posterUrl: "/posters/x2.jpg"
+    posterUrl: "/posters/x2.jpg",
+    trailerUrl: "https://youtube.com/watch?v=SIPrQ63O7uM"
   },
   {
     id: "daredevil",
@@ -94,7 +100,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.06,
     characters: [],
-    posterUrl: "/posters/daredevil.jpg"
+    posterUrl: "/posters/daredevil.jpg",
+    trailerUrl: "https://youtube.com/watch?v=jAy6NJ_D5vU"
   },
   {
     id: "blade-trinity",
@@ -107,7 +114,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.07,
     characters: [],
-    posterUrl: "/posters/blade-trinity.jpg"
+    posterUrl: "/posters/blade-trinity.jpg",
+    trailerUrl: "https://youtube.com/watch?v=fPcNbsW69Eg"
   },
   {
     id: "spider-man-2",
@@ -120,7 +128,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.08,
     characters: [],
-    posterUrl: "/posters/spider-man-2.jpg"
+    posterUrl: "/posters/spider-man-2.jpg",
+    trailerUrl: "https://youtube.com/watch?v=nq1M_Wc4FIc"
   },
   {
     id: "elektra",
@@ -133,7 +142,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.09,
     characters: [],
-    posterUrl: "/posters/elektra.jpg"
+    posterUrl: "/posters/elektra.jpg",
+    trailerUrl: "https://youtube.com/watch?v=3ZWcZrwvoT8"
   },
   {
     id: "fantastic-four-2005",
@@ -146,7 +156,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.1,
     characters: [],
-    posterUrl: "/posters/fantastic-four-2005.jpg"
+    posterUrl: "/posters/fantastic-four-2005.jpg",
+    trailerUrl: "https://youtube.com/watch?v=18QQWa5MEcs"
   },
   {
     id: "x-men-last-stand",
@@ -159,7 +170,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.11,
     characters: [],
-    posterUrl: "/posters/x-men-last-stand.jpg"
+    posterUrl: "/posters/x-men-last-stand.jpg",
+    trailerUrl: "https://youtube.com/watch?v=ZQ0v5dXbw7M"
   },
   {
     id: "spider-man-3",
@@ -172,7 +184,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.12,
     characters: [],
-    posterUrl: "/posters/spider-man-3.jpg"
+    posterUrl: "/posters/spider-man-3.jpg",
+    trailerUrl: "https://youtube.com/watch?v=e5wUilOeOmg"
   },
   {
     id: "fantastic-four-silver-surfer",
@@ -185,7 +198,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.13,
     characters: [],
-    posterUrl: "/posters/fantastic-four-silver-surfer.jpg"
+    posterUrl: "/posters/fantastic-four-silver-surfer.jpg",
+    trailerUrl: "https://youtube.com/watch?v=l2Pxa11A9iI"
   },
   {
     id: "ghost-rider",
@@ -198,7 +212,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.14,
     characters: [],
-    posterUrl: "/posters/ghost-rider.jpg"
+    posterUrl: "/posters/ghost-rider.jpg",
+    trailerUrl: "https://youtube.com/watch?v=nu6R7ypaz5g"
   },
   {
     id: "x-men-origins-wolverine",
@@ -211,7 +226,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.15,
     characters: [],
-    posterUrl: "/posters/x-men-origins-wolverine.jpg"
+    posterUrl: "/posters/x-men-origins-wolverine.jpg",
+    trailerUrl: "https://youtube.com/watch?v=8IxT7WFL6Ec"
   },
   {
     id: "ghost-rider-spirit",
@@ -224,7 +240,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.16,
     characters: [],
-    posterUrl: "/posters/ghost-rider-spirit.jpg"
+    posterUrl: "/posters/ghost-rider-spirit.jpg",
+    trailerUrl: "https://youtube.com/watch?v=UUObgxCoUgA"
   },
   {
     id: "x-men-first-class",
@@ -237,7 +254,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.17,
     characters: [],
-    posterUrl: "/posters/x-men-first-class.jpg"
+    posterUrl: "/posters/x-men-first-class.jpg",
+    trailerUrl: "https://youtube.com/watch?v=kyQKi5-k0UU"
   },
   {
     id: "amazing-spider-man-1",
@@ -250,7 +268,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.18,
     characters: [],
-    posterUrl: "/posters/amazing-spider-man-1.jpg"
+    posterUrl: "/posters/amazing-spider-man-1.jpg",
+    trailerUrl: "https://youtube.com/watch?v=-tnxzJ0SSOw"
   },
   {
     id: "the-wolverine",
@@ -263,7 +282,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.19,
     characters: [],
-    posterUrl: "/posters/the-wolverine.jpg"
+    posterUrl: "/posters/the-wolverine.jpg",
+    trailerUrl: "https://youtube.com/watch?v=hBvH09-v1JA"
   },
   {
     id: "amazing-spider-man-2",
@@ -276,7 +296,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.2,
     characters: [],
-    posterUrl: "/posters/amazing-spider-man-2.jpg"
+    posterUrl: "/posters/amazing-spider-man-2.jpg",
+    trailerUrl: "https://youtube.com/watch?v=nbp3Ra3Yp74"
   },
   {
     id: "x-men-dofp",
@@ -289,7 +310,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.21,
     characters: [],
-    posterUrl: "/posters/x-men-dofp.jpg"
+    posterUrl: "/posters/x-men-dofp.jpg",
+    trailerUrl: "https://youtube.com/watch?v=pK2zYHWDZKo"
   },
   {
     id: "fantastic-four-2015",
@@ -302,7 +324,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.22,
     characters: [],
-    posterUrl: "/posters/fantastic-four-2015.jpg"
+    posterUrl: "/posters/fantastic-four-2015.jpg",
+    trailerUrl: "https://youtube.com/watch?v=18QQWa5MEcs"
   },
   {
     id: "deadpool-1",
@@ -315,7 +338,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.23,
     characters: [],
-    posterUrl: "/posters/deadpool-1.jpg"
+    posterUrl: "/posters/deadpool-1.jpg",
+    trailerUrl: "https://youtube.com/watch?v=Xithigfg7dA"
   },
   {
     id: "x-men-apocalypse",
@@ -328,7 +352,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.24,
     characters: [],
-    posterUrl: "/posters/x-men-apocalypse.jpg"
+    posterUrl: "/posters/x-men-apocalypse.jpg",
+    trailerUrl: "https://youtube.com/watch?v=PfBVIHgQbYk"
   },
   {
     id: "logan",
@@ -341,7 +366,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.25,
     characters: [],
-    posterUrl: "/posters/logan.jpg"
+    posterUrl: "/posters/logan.jpg",
+    trailerUrl: "https://youtube.com/watch?v=Div0iP65aZo"
   },
   {
     id: "venom-1",
@@ -354,7 +380,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.26,
     characters: [],
-    posterUrl: "/posters/venom-1.jpg"
+    posterUrl: "/posters/venom-1.jpg",
+    trailerUrl: "https://youtube.com/watch?v=u9Mv98Gr5pY"
   },
   {
     id: "deadpool-2",
@@ -367,7 +394,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.27,
     characters: [],
-    posterUrl: "/posters/deadpool-2.jpg"
+    posterUrl: "/posters/deadpool-2.jpg",
+    trailerUrl: "https://youtube.com/watch?v=KhI4xzwYImA"
   },
   {
     id: "dark-phoenix",
@@ -380,7 +408,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.28,
     characters: [],
-    posterUrl: "/posters/dark-phoenix.jpg"
+    posterUrl: "/posters/dark-phoenix.jpg",
+    trailerUrl: "https://youtube.com/watch?v=azvR__GRQic"
   },
   {
     id: "new-mutants",
@@ -393,7 +422,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.29,
     characters: [],
-    posterUrl: "/posters/new-mutants.jpg"
+    posterUrl: "/posters/new-mutants.jpg",
+    trailerUrl: "https://youtube.com/watch?v=W_vJhUAOFpI"
   },
   {
     id: "venom-ltbc",
@@ -406,7 +436,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.3,
     characters: [],
-    posterUrl: "/posters/venom-ltbc.jpg"
+    posterUrl: "/posters/venom-ltbc.jpg",
+    trailerUrl: "https://youtube.com/watch?v=-FmWuCgJmxo"
   },
   {
     id: "morbius",
@@ -419,7 +450,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.31,
     characters: [],
-    posterUrl: "/posters/morbius.jpg"
+    posterUrl: "/posters/morbius.jpg",
+    trailerUrl: "https://youtube.com/watch?v=oZ6iiRrz1SY"
   },
   {
     id: "madame-web",
@@ -432,7 +464,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.32,
     characters: [],
-    posterUrl: "/posters/madame-web.jpg"
+    posterUrl: "/posters/madame-web.jpg",
+    trailerUrl: "https://youtube.com/watch?v=s_76M4c4LTo"
   },
   {
     id: "venom-last-dance",
@@ -445,7 +478,8 @@ export const mcuTimeline: MCUItem[] = [
     importance: "optional",
     timelineOrder: 0.33,
     characters: [],
-    posterUrl: "/posters/venom-last-dance.jpg"
+    posterUrl: "/posters/venom-last-dance.jpg",
+    trailerUrl: "https://youtube.com/watch?v=__2bjWbetsA"
   },
   {
     id: "ca-first-avenger",
@@ -463,7 +497,8 @@ export const mcuTimeline: MCUItem[] = [
       "Red Skull"
     ],
     posterUrl: "/posters/ca-first-avenger.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=JerVrbLldXw"
   },
   {
     id: "captain-marvel",
@@ -480,7 +515,8 @@ export const mcuTimeline: MCUItem[] = [
       "Talos"
     ],
     posterUrl: "/posters/captain-marvel.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=Z1BCujX3pw8"
   },
   {
     id: "agent-carter-s1",
@@ -498,7 +534,8 @@ export const mcuTimeline: MCUItem[] = [
       "Howard Stark",
       "Edwin Jarvis"
     ],
-    importance: "optional"
+    importance: "optional",
+    trailerUrl: "https://youtube.com/watch?v=m1_cN43mGkc"
   },
   {
     id: "iron-man",
@@ -515,7 +552,8 @@ export const mcuTimeline: MCUItem[] = [
       "Obadiah Stane"
     ],
     posterUrl: "/posters/iron-man.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=8ugaeA-nMTc"
   },
   {
     id: "iron-man-2",
@@ -533,7 +571,8 @@ export const mcuTimeline: MCUItem[] = [
       "Justin Hammer"
     ],
     posterUrl: "/posters/iron-man-2.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=BoohRoVA9WQ"
   },
   {
     id: "incredible-hulk",
@@ -550,7 +589,8 @@ export const mcuTimeline: MCUItem[] = [
       "Emil Blonsky"
     ],
     posterUrl: "/posters/incredible-hulk.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=xbqNb2PFKKA"
   },
   {
     id: "thor",
@@ -568,7 +608,8 @@ export const mcuTimeline: MCUItem[] = [
       "Odin"
     ],
     posterUrl: "/posters/thor.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=JOddp-nlNvQ"
   },
   {
     id: "avengers",
@@ -589,7 +630,8 @@ export const mcuTimeline: MCUItem[] = [
       "Loki"
     ],
     posterUrl: "/posters/avengers.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=eOrNdBpGMv8"
   },
   {
     id: "iron-man-3",
@@ -606,7 +648,8 @@ export const mcuTimeline: MCUItem[] = [
       "Aldrich Killian"
     ],
     posterUrl: "/posters/iron-man-3.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=Ke1Y3P9D0Bc"
   },
   {
     id: "thor-dark-world",
@@ -624,7 +667,8 @@ export const mcuTimeline: MCUItem[] = [
       "Malekith"
     ],
     posterUrl: "/posters/thor-dark-world.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=npvJ9FTgZbM"
   },
   {
     id: "ca-winter-soldier",
@@ -643,7 +687,8 @@ export const mcuTimeline: MCUItem[] = [
       "Nick Fury"
     ],
     posterUrl: "/posters/ca-winter-soldier.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=tbayiPxkUMM"
   },
   {
     id: "gotg",
@@ -663,7 +708,8 @@ export const mcuTimeline: MCUItem[] = [
       "Ronan"
     ],
     posterUrl: "/posters/gotg.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=d96cjJhvlMA"
   },
   {
     id: "gotg-vol-2",
@@ -683,7 +729,8 @@ export const mcuTimeline: MCUItem[] = [
       "Ego"
     ],
     posterUrl: "/posters/gotg-vol-2.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=wUn05hdkhjM"
   },
   {
     id: "avengers-aou",
@@ -703,7 +750,8 @@ export const mcuTimeline: MCUItem[] = [
       "Wanda Maximoff"
     ],
     posterUrl: "/posters/avengers-aou.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=tmeOjFno6Do"
   },
   {
     id: "ant-man",
@@ -720,7 +768,8 @@ export const mcuTimeline: MCUItem[] = [
       "Hank Pym"
     ],
     posterUrl: "/posters/ant-man.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=pWdKf3MneyI"
   },
   {
     id: "ca-civil-war",
@@ -739,7 +788,8 @@ export const mcuTimeline: MCUItem[] = [
       "Peter Parker"
     ],
     posterUrl: "/posters/ca-civil-war.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=43NWzay3W4s"
   },
   {
     id: "black-widow",
@@ -756,7 +806,8 @@ export const mcuTimeline: MCUItem[] = [
       "Alexei Shostakov"
     ],
     posterUrl: "/posters/black-widow.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=ybji16u608U"
   },
   {
     id: "black-panther",
@@ -774,7 +825,8 @@ export const mcuTimeline: MCUItem[] = [
       "Okoye"
     ],
     posterUrl: "/posters/black-panther.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=xjDjIWPwcPU"
   },
   {
     id: "spider-man-homecoming",
@@ -792,7 +844,8 @@ export const mcuTimeline: MCUItem[] = [
       "Ned Leeds"
     ],
     posterUrl: "/posters/spider-man-homecoming.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=rk-dF1lIbIg"
   },
   {
     id: "doctor-strange",
@@ -810,7 +863,8 @@ export const mcuTimeline: MCUItem[] = [
       "Ancient One"
     ],
     posterUrl: "/posters/doctor-strange.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=h7gvFravm4A"
   },
   {
     id: "thor-ragnarok",
@@ -829,7 +883,8 @@ export const mcuTimeline: MCUItem[] = [
       "Bruce Banner"
     ],
     posterUrl: "/posters/thor-ragnarok.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=ue80QwXMRHg"
   },
   {
     id: "ant-man-wasp",
@@ -847,7 +902,8 @@ export const mcuTimeline: MCUItem[] = [
       "Janet van Dyne"
     ],
     posterUrl: "/posters/ant-man-wasp.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=8_rTIAOohas"
   },
   {
     id: "avengers-infinity-war",
@@ -867,7 +923,8 @@ export const mcuTimeline: MCUItem[] = [
       "Peter Quill"
     ],
     posterUrl: "/posters/avengers-infinity-war.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=6ZfuNTqbHE8"
   },
   {
     id: "avengers-endgame",
@@ -889,7 +946,8 @@ export const mcuTimeline: MCUItem[] = [
       "Thanos"
     ],
     posterUrl: "/posters/avengers-endgame.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=TcMBFSGVi1c"
   },
   {
     id: "loki-s1",
@@ -907,7 +965,8 @@ export const mcuTimeline: MCUItem[] = [
       "He Who Remains"
     ],
     posterUrl: "/posters/loki-s1.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=nW948Va-l10"
   },
   {
     id: "wandavision",
@@ -925,7 +984,8 @@ export const mcuTimeline: MCUItem[] = [
       "Monica Rambeau"
     ],
     posterUrl: "/posters/wandavision.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=sj9J2ecsSpo"
   },
   {
     id: "shang-chi",
@@ -942,7 +1002,8 @@ export const mcuTimeline: MCUItem[] = [
       "Wenwu"
     ],
     posterUrl: "/posters/shang-chi.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=giWIr7U1deA"
   },
   {
     id: "tfatws",
@@ -960,7 +1021,8 @@ export const mcuTimeline: MCUItem[] = [
       "Zemo"
     ],
     posterUrl: "/posters/tfatws.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=IWBsDaFWyTE"
   },
   {
     id: "spider-man-ffh",
@@ -978,7 +1040,8 @@ export const mcuTimeline: MCUItem[] = [
       "MJ"
     ],
     posterUrl: "/posters/spider-man-ffh.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=Nt9L1jCKGnE"
   },
   {
     id: "spider-man-nwh",
@@ -998,7 +1061,8 @@ export const mcuTimeline: MCUItem[] = [
       "Doc Ock"
     ],
     posterUrl: "/posters/spider-man-nwh.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=JfVOs4VSpmA"
   },
   {
     id: "eternals",
@@ -1022,7 +1086,8 @@ export const mcuTimeline: MCUItem[] = [
       "Thena"
     ],
     posterUrl: "/posters/eternals.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=x_me3xsvDgk"
   },
   {
     id: "hawkeye",
@@ -1040,7 +1105,8 @@ export const mcuTimeline: MCUItem[] = [
       "Kingpin"
     ],
     posterUrl: "/posters/hawkeye.jpg",
-    importance: "optional"
+    importance: "optional",
+    trailerUrl: "https://youtube.com/watch?v=5VYb3B1ETlk"
   },
   {
     id: "doctor-strange-mom",
@@ -1058,7 +1124,8 @@ export const mcuTimeline: MCUItem[] = [
       "Wong"
     ],
     posterUrl: "/posters/doctor-strange-mom.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=aWzlQ2N6qqg"
   },
   {
     id: "moon-knight",
@@ -1076,7 +1143,8 @@ export const mcuTimeline: MCUItem[] = [
       "Khonshu"
     ],
     posterUrl: "/posters/moon-knight.jpg",
-    importance: "optional"
+    importance: "optional",
+    trailerUrl: "https://youtube.com/watch?v=x7Krla_UxRg"
   },
   {
     id: "ms-marvel",
@@ -1093,7 +1161,8 @@ export const mcuTimeline: MCUItem[] = [
       "Nakia"
     ],
     posterUrl: "/posters/ms-marvel.jpg",
-    importance: "optional"
+    importance: "optional",
+    trailerUrl: "https://youtube.com/watch?v=m9EX0f6V11Y"
   },
   {
     id: "thor-love-thunder",
@@ -1112,7 +1181,8 @@ export const mcuTimeline: MCUItem[] = [
       "Korg"
     ],
     posterUrl: "/posters/thor-love-thunder.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=Go8nTmfrQd8"
   },
   {
     id: "she-hulk",
@@ -1130,7 +1200,8 @@ export const mcuTimeline: MCUItem[] = [
       "Emil Blonsky"
     ],
     posterUrl: "/posters/she-hulk.jpg",
-    importance: "optional"
+    importance: "optional",
+    trailerUrl: "https://youtube.com/watch?v=u7JsKhI2An0"
   },
   {
     id: "black-panther-wf",
@@ -1149,7 +1220,8 @@ export const mcuTimeline: MCUItem[] = [
       "Riri Williams"
     ],
     posterUrl: "/posters/black-panther-wf.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=_Z3QKkl1WyM"
   },
   {
     id: "ant-man-quantumania",
@@ -1167,7 +1239,8 @@ export const mcuTimeline: MCUItem[] = [
       "Cassie Lang"
     ],
     posterUrl: "/posters/ant-man-quantumania.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=ZlNFpri-Y40"
   },
   {
     id: "gotg-vol-3",
@@ -1188,7 +1261,8 @@ export const mcuTimeline: MCUItem[] = [
       "Groot"
     ],
     posterUrl: "/posters/gotg-vol-3.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=u3V5KDHRQvk"
   },
   {
     id: "secret-invasion",
@@ -1206,7 +1280,8 @@ export const mcuTimeline: MCUItem[] = [
       "G'iah"
     ],
     posterUrl: "/posters/secret-invasion.jpg",
-    importance: "optional"
+    importance: "optional",
+    trailerUrl: "https://youtube.com/watch?v=Tp_YZNqNBhw"
   },
   {
     id: "loki-s2",
@@ -1225,7 +1300,8 @@ export const mcuTimeline: MCUItem[] = [
       "Victor Timely"
     ],
     posterUrl: "/posters/loki-s2.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=dug56u8NN7g"
   },
   {
     id: "the-marvels",
@@ -1244,7 +1320,8 @@ export const mcuTimeline: MCUItem[] = [
       "Dar-Benn"
     ],
     posterUrl: "/posters/the-marvels.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=wS_qbDztgVY"
   },
   {
     id: "echo",
@@ -1261,7 +1338,8 @@ export const mcuTimeline: MCUItem[] = [
       "Daredevil"
     ],
     posterUrl: "/posters/echo.jpg",
-    importance: "optional"
+    importance: "optional",
+    trailerUrl: "https://youtube.com/watch?v=AFUKnherhuw"
   },
   {
     id: "deadpool-wolverine",
@@ -1278,7 +1356,8 @@ export const mcuTimeline: MCUItem[] = [
       "Cassandra Nova"
     ],
     posterUrl: "/posters/deadpool-wolverine.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=73_1biulkYk"
   },
   {
     id: "agatha-all-along",
@@ -1295,7 +1374,8 @@ export const mcuTimeline: MCUItem[] = [
       "Rio Vidal"
     ],
     posterUrl: "/posters/agatha-all-along.jpg",
-    importance: "optional"
+    importance: "optional",
+    trailerUrl: "https://youtube.com/watch?v=R9pXbNz6Vbw"
   },
   {
     id: "captain-america-bnw",
@@ -1313,7 +1393,8 @@ export const mcuTimeline: MCUItem[] = [
       "The Leader"
     ],
     posterUrl: "/posters/captain-america-bnw.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=1pHDWnXmK7Y"
   },
   {
     id: "thunderbolts",
@@ -1334,7 +1415,8 @@ export const mcuTimeline: MCUItem[] = [
       "Valentina"
     ],
     posterUrl: "/posters/thunderbolts.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=XerphmT2HI4"
   },
   {
     id: "fantastic-four",
@@ -1353,7 +1435,8 @@ export const mcuTimeline: MCUItem[] = [
       "Galactus"
     ],
     posterUrl: "/posters/fantastic-four.jpg",
-    importance: "imp"
+    importance: "imp",
+    trailerUrl: "https://youtube.com/watch?v=pAsmrKyMqaA"
   },
   {
     id: "spiderman-brand-new-day",
@@ -1371,7 +1454,8 @@ export const mcuTimeline: MCUItem[] = [
       "Ned Leeds",
       "Hulk"
     ],
-    posterUrl: "/posters/spiderman-brand-new-day.jpg"
+    posterUrl: "/posters/spiderman-brand-new-day.jpg",
+    trailerUrl: "https://youtube.com/watch?v=daXaTug8rL4"
   }
 ];
 
