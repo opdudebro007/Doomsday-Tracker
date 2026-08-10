@@ -134,7 +134,7 @@ export default function Home() {
           <div className="xl:w-2/3 flex flex-col gap-5 justify-center">
             
             {/* UP NEXT CARD */}
-            <div className="flex-1 p-5 rounded-2xl border border-border bg-gradient-to-r from-muted/50 to-background">
+            <div className="flex-1 p-5 rounded-2xl border border-border bg-gradient-to-br from-card to-muted shadow-sm">
               {nextUnwatched ? (
                 <div className="flex flex-col sm:flex-row gap-5 items-center">
                   {/* Poster Placeholder */}
@@ -165,7 +165,7 @@ export default function Home() {
                     </button>
                     <button 
                       onClick={() => toggleWatched(nextUnwatched.id)}
-                      className="w-11 h-11 rounded-xl border border-green-500/30 bg-green-500/10 flex items-center justify-center text-green-500 hover:bg-green-500/20 transition-colors"
+                      className="w-11 h-11 rounded-xl border border-green-500/30 bg-[#0a1a0f] flex items-center justify-center text-green-500 hover:bg-green-500/20 transition-colors"
                     >
                       <Check className="w-5 h-5" />
                     </button>
@@ -267,7 +267,7 @@ export default function Home() {
                         />
                       )}
                       
-                      <div className={cn("absolute inset-0 transition-opacity", isWatched ? "bg-background/80" : "bg-gradient-to-t from-card via-transparent to-transparent opacity-90")}></div>
+                      <div className={cn("absolute inset-0 transition-opacity", isWatched ? "bg-[#081a11]/70" : "bg-gradient-to-t from-[#111216] via-transparent to-transparent opacity-80")}></div>
                       
                       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full p-4">
                         {isWatched ? (
@@ -332,7 +332,7 @@ export default function Home() {
                           className={cn(
                             "w-full py-2 rounded-xl text-[13px] font-bold transition-colors flex items-center justify-center gap-2 border",
                             isWatched 
-                              ? "bg-green-500/10 border-green-500/30 text-[#22c55e] hover:bg-green-500/20" 
+                              ? "bg-[#062413] border-[#104b27] text-[#22c55e] hover:bg-[#0a351c]" 
                               : "bg-muted border-border text-foreground hover:bg-[#22242a]"
                           )}
                         >
@@ -359,7 +359,7 @@ export default function Home() {
 
 function StatBlock({ icon, label, value, valueColor = "text-foreground" }: { icon: React.ReactNode, label: string, value: string, valueColor?: string }) {
   return (
-    <div className="bg-[#0c0d10] border border-border rounded-xl p-4 flex flex-col justify-center">
+    <div className="bg-card border border-border rounded-xl p-4 flex flex-col justify-center">
       <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground font-medium tracking-wide mb-1">
         {icon} {label}
       </div>
@@ -378,7 +378,7 @@ function FilterPill({ icon, label, active, onClick }: { icon?: React.ReactNode, 
         "whitespace-nowrap flex items-center gap-2 px-4 py-1.5 rounded-full text-[12px] font-bold transition-all border",
         active 
           ? "bg-[#e62429] text-white border-[#e62429]" 
-          : "bg-muted text-[#9ca3af] border-border hover:text-foreground hover:border-[#4a4e59]"
+          : "bg-muted text-muted-foreground border-border hover:text-foreground hover:border-foreground/30"
       )}
     >
       {icon}
