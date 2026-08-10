@@ -99,7 +99,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: "Legacy",
     importance: "optional",
     timelineOrder: 0.05,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/x-men-97.jpg"
   },
   {
     id: "daredevil",
@@ -685,7 +686,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: 2,
     importance: "optional",
     timelineOrder: 8.1,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/agents-of-shield.jpg"
   },
   {
     id: "thor-dark-world",
@@ -739,7 +741,8 @@ export const mcuTimeline: MCUItem[] = [
     characters: [
       "Daredevil",
       "Kingpin"
-    ]
+    ],
+    posterUrl: "/posters/daredevil-series.jpg"
   },
   {
     id: "gotg",
@@ -772,7 +775,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: 2,
     importance: "optional",
     timelineOrder: 11.1,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/jessica-jones.jpg"
   },
   {
     id: "gotg-vol-2",
@@ -826,7 +830,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: 3,
     importance: "optional",
     timelineOrder: 13.1,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/luke-cage.jpg"
   },
   {
     id: "ant-man",
@@ -856,7 +861,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: 3,
     importance: "optional",
     timelineOrder: 14.1,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/iron-fist.jpg"
   },
   {
     id: "defenders",
@@ -870,7 +876,8 @@ export const mcuTimeline: MCUItem[] = [
     timelineOrder: 14.2,
     characters: [
       "Daredevil"
-    ]
+    ],
+    posterUrl: "/posters/defenders.jpg"
   },
   {
     id: "ca-civil-war",
@@ -902,7 +909,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: 4,
     importance: "optional",
     timelineOrder: 15.1,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/i-am-groot.jpg"
   },
   {
     id: "black-widow",
@@ -951,7 +959,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: 3,
     importance: "optional",
     timelineOrder: 17.1,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/punisher.jpg"
   },
   {
     id: "inhumans",
@@ -963,7 +972,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: 3,
     importance: "optional",
     timelineOrder: 17.2,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/inhumans.jpg"
   },
   {
     id: "runaways",
@@ -975,7 +985,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: 3,
     importance: "optional",
     timelineOrder: 17.3,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/runaways.jpg"
   },
   {
     id: "cloak-and-dagger",
@@ -987,7 +998,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: 3,
     importance: "optional",
     timelineOrder: 17.4,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/cloak-and-dagger.jpg"
   },
   {
     id: "spider-man-homecoming",
@@ -1097,7 +1109,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: 3,
     importance: "optional",
     timelineOrder: 22.1,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/helstrom.jpg"
   },
   {
     id: "avengers-endgame",
@@ -1410,7 +1423,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: 4,
     importance: "optional",
     timelineOrder: 36.1,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/werewolf-by-night.jpg"
   },
   {
     id: "black-panther-wf",
@@ -1442,7 +1456,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: 4,
     importance: "imp",
     timelineOrder: 37.1,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/gotg-holiday-special.jpg"
   },
   {
     id: "ant-man-quantumania",
@@ -1534,7 +1549,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: 5,
     importance: "optional",
     timelineOrder: 41.1,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/ironheart.jpg"
   },
   {
     id: "the-marvels",
@@ -1569,7 +1585,8 @@ export const mcuTimeline: MCUItem[] = [
     characters: [
       "Daredevil",
       "Kingpin"
-    ]
+    ],
+    posterUrl: "/posters/daredevil-born-again.jpg"
   },
   {
     id: "echo",
