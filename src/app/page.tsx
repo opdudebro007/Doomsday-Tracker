@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { TiltCard } from "@/components/ui/TiltCard";
+import { Tilt } from "@/components/ui/Tilt";
 
 type FilterType = "all" | "imp" | "optional" | "legacy" | "movies" | "shows" | "watched" | "unwatched" | "favorites" | "phase1" | "phase2" | "phase3" | "phase4" | "phase5" | "phase6";
 type SortType = "timeline" | "runtime" | "alpha" | "newest" | "oldest";
@@ -115,7 +116,7 @@ export default function Home() {
         <div className="flex flex-col xl:flex-row gap-12 relative z-10">
           
           {/* LEFT PROGRESS CARD */}
-          <div className="xl:w-1/3 flex flex-col items-center justify-center pt-4">
+          <Tilt className="xl:w-1/3 flex flex-col items-center justify-center pt-4" rotation={10}>
             <div className="relative flex items-center justify-center mb-6 md:mb-10 scale-[0.8] md:scale-100 origin-center">
               <svg height="220" width="220" className="transform -rotate-90">
                 <circle stroke="#222" fill="transparent" strokeWidth="16" r="95" cx="110" cy="110" />
@@ -135,18 +136,18 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="w-full max-w-[280px] bg-muted h-2 rounded-sm overflow-hidden -skew-x-12">
-              <div className="bg-gradient-to-r from-orange-500 to-[#15803d] h-full rounded-sm relative" style={{ width: `${overallProgress}%` }}>
+            <div className="w-full max-w-[280px] bg-muted h-2 rounded-full overflow-hidden">
+              <div className="bg-gradient-to-r from-orange-500 to-[#15803d] h-full rounded-full relative" style={{ width: `${overallProgress}%` }}>
                 <div className="absolute right-0 top-0 bottom-0 w-4 bg-white/30 blur-[2px]"></div>
               </div>
             </div>
-          </div>
+          </Tilt>
 
           {/* RIGHT METRICS AREA */}
           <div className="xl:w-2/3 flex flex-col gap-5 justify-center">
             
             {/* UP NEXT CARD */}
-            <div className="flex-1 p-5 rounded-2xl border border-border/50 bg-card/50 backdrop-blur-md shadow-lg">
+            <Tilt className="flex-1 p-5 rounded-2xl border border-border/50 bg-card/50 backdrop-blur-md shadow-lg" rotation={5}>
               {nextUnwatched ? (
                 <div className="flex flex-col sm:flex-row gap-5 items-center">
                   {/* Poster Placeholder */}
@@ -172,9 +173,8 @@ export default function Home() {
                   </div>
 
                   <div className="flex items-center gap-3 shrink-0 sm:self-end sm:mb-2">
-                    <button className="bg-[#15803d] hover:bg-[#15803d]/80 text-white font-bold py-2.5 px-6 rounded-sm flex items-center gap-2 transition-colors shadow-[0_0_20px_rgba(21, 128, 61,0.3)] -skew-x-12">
-                      <Play className="w-5 h-5 fill-current skew-x-12" />
-                      <span className="skew-x-12">Start Tracking</span>
+                    <button className="bg-[#15803d] hover:bg-[#15803d]/80 text-white font-bold py-2.5 px-6 rounded-full flex items-center gap-2 transition-colors shadow-[0_0_20px_rgba(21, 128, 61,0.3)]">
+                      <Play className="w-4 h-4 fill-current" /> Continue
                     </button>
                     <button 
                       onClick={() => toggleWatched(nextUnwatched.id)}

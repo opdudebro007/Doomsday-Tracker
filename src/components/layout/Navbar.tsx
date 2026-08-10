@@ -5,6 +5,7 @@ import { Search, Trophy, Share2, Settings, Flame, Shuffle, Clock } from "lucide-
 import { useTracker } from "@/context/TrackerContext";
 import { useState, useEffect } from "react";
 import { AVENGERS_DOOMSDAY_RELEASE_DATE } from "@/data/timeline";
+import { Tilt } from "@/components/ui/Tilt";
 
 export function Navbar() {
   const { overallProgress, streak, searchQuery, setSearchQuery } = useTracker();
@@ -66,8 +67,8 @@ export function Navbar() {
         {/* MIDDLE ACTIONS */}
         <div className="flex flex-col md:flex-row w-full md:w-auto items-center gap-3 md:gap-4 flex-1 justify-center">
           {/* Countdown Pill */}
-          <div className="flex w-full md:w-auto justify-center items-center gap-2 bg-doomsday-green/10 border border-doomsday-green/20 rounded-sm -skew-x-12 pl-1 pr-4 py-1 text-xs md:text-sm">
-            <div className="w-5 h-5 md:w-6 md:h-6 shrink-0 rounded-sm bg-doomsday-green/20 flex items-center justify-center text-doomsday-green">
+          <div className="flex w-full md:w-auto justify-center items-center gap-2 bg-doomsday-green/10 border border-doomsday-green/20 rounded-full pl-1 pr-4 py-1 text-xs md:text-sm">
+            <div className="w-5 h-5 md:w-6 md:h-6 shrink-0 rounded-full bg-doomsday-green/20 flex items-center justify-center text-doomsday-green">
               <Clock className="w-3 h-3 md:w-3.5 md:h-3.5" />
             </div>
             <span className="text-muted-foreground whitespace-nowrap">Doomsday in:</span>
@@ -77,16 +78,16 @@ export function Navbar() {
           </div>
 
           {/* Search */}
-          <div className="relative w-full md:w-64 xl:w-80">
+          <Tilt className="relative w-full md:w-64 xl:w-80 z-20" rotation={8} timing={100}>
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
             <input
               type="text"
               placeholder="Search title, character..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-muted border border-border rounded-sm py-2 pl-9 pr-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-border transition-colors -skew-x-12"
+              className="w-full bg-muted border border-border rounded-full py-2 pl-9 pr-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-border transition-colors shadow-inner"
             />
-          </div>
+          </Tilt>
         </div>
 
         {/* RIGHT ICONS */}
@@ -105,9 +106,9 @@ export function Navbar() {
             <Trophy className="w-4 h-4" />
           </button>
           
-          <Link href="/stats" className="hidden md:flex items-center gap-2 rounded-sm bg-doomsday-green/10 border border-doomsday-green/20 hover:bg-doomsday-green/20 transition-colors px-3 py-1.5 text-doomsday-green text-xs font-bold -skew-x-12">
+          <Link href="/stats" className="hidden md:flex items-center gap-2 rounded-full bg-doomsday-green/10 border border-doomsday-green/20 hover:bg-doomsday-green/20 transition-colors px-3 py-1.5 text-doomsday-green text-xs font-bold">
             <div className="w-4 h-4 rounded-full border-2 border-current border-t-transparent animate-spin-slow"></div>
-            Stats <span className="bg-doomsday-green text-white px-1.5 py-0.5 rounded-sm text-[10px]">{overallProgress}%</span>
+            Stats <span className="bg-doomsday-green text-white px-1.5 py-0.5 rounded-full text-[10px]">{overallProgress}%</span>
           </Link>
 
           <button className="w-9 h-9 flex items-center justify-center rounded-full bg-muted border border-border text-muted-foreground hover:text-foreground hover:bg-foreground/5 transition-colors">
