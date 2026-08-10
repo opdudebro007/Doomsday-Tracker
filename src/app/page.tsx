@@ -135,8 +135,8 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="w-full max-w-[280px] bg-muted h-2 rounded-full overflow-hidden">
-              <div className="bg-gradient-to-r from-orange-500 to-[#15803d] h-full rounded-full relative" style={{ width: `${overallProgress}%` }}>
+            <div className="w-full max-w-[280px] bg-muted h-2 rounded-sm overflow-hidden -skew-x-12">
+              <div className="bg-gradient-to-r from-orange-500 to-[#15803d] h-full rounded-sm relative" style={{ width: `${overallProgress}%` }}>
                 <div className="absolute right-0 top-0 bottom-0 w-4 bg-white/30 blur-[2px]"></div>
               </div>
             </div>
@@ -172,8 +172,9 @@ export default function Home() {
                   </div>
 
                   <div className="flex items-center gap-3 shrink-0 sm:self-end sm:mb-2">
-                    <button className="bg-[#15803d] hover:bg-[#15803d]/80 text-white font-bold py-2.5 px-6 rounded-full flex items-center gap-2 transition-colors shadow-[0_0_20px_rgba(21, 128, 61,0.3)]">
-                      <Play className="w-4 h-4 fill-current" /> Continue
+                    <button className="bg-[#15803d] hover:bg-[#15803d]/80 text-white font-bold py-2.5 px-6 rounded-sm flex items-center gap-2 transition-colors shadow-[0_0_20px_rgba(21, 128, 61,0.3)] -skew-x-12">
+                      <Play className="w-5 h-5 fill-current skew-x-12" />
+                      <span className="skew-x-12">Start Tracking</span>
                     </button>
                     <button 
                       onClick={() => toggleWatched(nextUnwatched.id)}

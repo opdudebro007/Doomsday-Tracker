@@ -11,7 +11,7 @@ import {
 } from "recharts";
 import { Award, Film, Tv, Clock, Target, TrendingUp } from "lucide-react";
 
-const COLORS = ['#e23636', '#9ca3af', '#b32a2a', '#ffffff'];
+const COLORS = ['#15803d', '#9ca3af', '#14532d', '#ffffff'];
 
 export default function StatsPage() {
   const {
@@ -137,7 +137,7 @@ export default function StatsPage() {
                   cursor={{ fill: 'rgba(255,255,255,0.05)' }}
                   contentStyle={{ backgroundColor: '#191b21', borderColor: 'rgba(255,255,255,0.1)', color: '#fff' }}
                 />
-                <Bar dataKey="Watched" stackId="a" fill="#e23636" radius={[0, 0, 4, 4]} />
+                <Bar dataKey="Watched" stackId="a" fill="#15803d" radius={[0, 0, 4, 4]} />
                 <Bar dataKey="Total" stackId="a" fill="rgba(255,255,255,0.1)" radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
