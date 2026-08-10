@@ -1354,6 +1354,24 @@ export const mcuTimeline: MCUItem[] = [
     ],
     posterUrl: "/posters/fantastic-four.jpg",
     importance: "imp"
+  },
+  {
+    id: "spiderman-brand-new-day",
+    title: "Spider-Man: Brand New Day",
+    type: "movie",
+    phase: 6,
+    year: 2026,
+    runtime: 145,
+    timelineOrder: 49,
+    importance: "imp",
+    synopsis: "A forgotten Peter Parker lives alone as a full-time Spider-Man until mounting pressure triggers a dangerous change and a powerful new enemy emerges.",
+    characters: [
+      "Peter Parker",
+      "MJ",
+      "Ned Leeds",
+      "Hulk"
+    ],
+    posterUrl: "/posters/spiderman-brand-new-day.jpg"
   }
 ];
 
