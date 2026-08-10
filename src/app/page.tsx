@@ -134,7 +134,7 @@ export default function Home() {
           <div className="xl:w-2/3 flex flex-col gap-5 justify-center">
             
             {/* UP NEXT CARD */}
-            <div className="flex-1 p-5 rounded-2xl border border-border bg-gradient-to-r from-[#1e1617] to-[#161112]">
+            <div className="flex-1 p-5 rounded-2xl border border-border bg-gradient-to-r from-muted/50 to-background">
               {nextUnwatched ? (
                 <div className="flex flex-col sm:flex-row gap-5 items-center">
                   {/* Poster Placeholder */}
@@ -165,7 +165,7 @@ export default function Home() {
                     </button>
                     <button 
                       onClick={() => toggleWatched(nextUnwatched.id)}
-                      className="w-11 h-11 rounded-xl border border-green-500/30 bg-[#0a1a0f] flex items-center justify-center text-green-500 hover:bg-green-500/20 transition-colors"
+                      className="w-11 h-11 rounded-xl border border-green-500/30 bg-green-500/10 flex items-center justify-center text-green-500 hover:bg-green-500/20 transition-colors"
                     >
                       <Check className="w-5 h-5" />
                     </button>
@@ -267,7 +267,7 @@ export default function Home() {
                         />
                       )}
                       
-                      <div className={cn("absolute inset-0 transition-opacity", isWatched ? "bg-[#081a11]/70" : "bg-gradient-to-t from-[#111216] via-transparent to-transparent opacity-80")}></div>
+                      <div className={cn("absolute inset-0 transition-opacity", isWatched ? "bg-background/80" : "bg-gradient-to-t from-card via-transparent to-transparent opacity-90")}></div>
                       
                       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full p-4">
                         {isWatched ? (
@@ -332,7 +332,7 @@ export default function Home() {
                           className={cn(
                             "w-full py-2 rounded-xl text-[13px] font-bold transition-colors flex items-center justify-center gap-2 border",
                             isWatched 
-                              ? "bg-[#062413] border-[#104b27] text-[#22c55e] hover:bg-[#0a351c]" 
+                              ? "bg-green-500/10 border-green-500/30 text-[#22c55e] hover:bg-green-500/20" 
                               : "bg-muted border-border text-foreground hover:bg-[#22242a]"
                           )}
                         >
