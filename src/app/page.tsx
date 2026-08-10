@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type FilterType = "all" | "movies" | "shows" | "watched" | "unwatched" | "favorites" | "phase1" | "phase2" | "phase3" | "phase4" | "phase5" | "phase6";
+type FilterType = "all" | "imp" | "optional" | "movies" | "shows" | "watched" | "unwatched" | "favorites" | "phase1" | "phase2" | "phase3" | "phase4" | "phase5" | "phase6";
 type SortType = "timeline" | "runtime" | "alpha" | "newest" | "oldest";
 
 export default function Home() {
@@ -64,6 +64,8 @@ export default function Home() {
       result = result.filter(i => !i.extended);
     }
     
+    if (activeFilter === "imp") result = result.filter(i => i.importance === "imp");
+    if (activeFilter === "optional") result = result.filter(i => i.importance === "optional");
     if (activeFilter === "movies") result = result.filter(i => i.type === "movie");
     if (activeFilter === "shows") result = result.filter(i => i.type === "show");
     if (activeFilter === "watched") result = result.filter(i => watchedIds.includes(i.id));
@@ -226,6 +228,8 @@ export default function Home() {
         {/* Filter Pills */}
         <div className="flex gap-2.5 overflow-x-auto pb-4 scrollbar-hide mb-6 items-center">
           <FilterPill label="All Projects" active={activeFilter === "all"} onClick={() => setActiveFilter("all")} />
+          <FilterPill icon={<Flame className="w-3.5 h-3.5" />} label="Important" active={activeFilter === "imp"} onClick={() => setActiveFilter("imp")} />
+          <FilterPill label="Optional" active={activeFilter === "optional"} onClick={() => setActiveFilter("optional")} />
           <FilterPill icon={<Film className="w-3.5 h-3.5" />} label="Movies" active={activeFilter === "movies"} onClick={() => setActiveFilter("movies")} />
           <FilterPill icon={<Tv className="w-3.5 h-3.5" />} label="Series & Specials" active={activeFilter === "shows"} onClick={() => setActiveFilter("shows")} />
           <FilterPill icon={<CheckCircle2 className="w-3.5 h-3.5" />} label="Watched" active={activeFilter === "watched"} onClick={() => setActiveFilter("watched")} />
@@ -301,7 +305,14 @@ export default function Home() {
                     {/* Details Area */}
                     <div className="p-4 flex flex-col flex-1">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="text-[11px] font-bold text-[#eab308]">Phase {item.phase}</span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-[11px] font-bold text-[#eab308]">Phase {item.phase}</span>
+                          {item.importance === "imp" ? (
+                            <span className="bg-[#e62429]/20 text-[#e62429] text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">Important</span>
+                          ) : (
+                            <span className="bg-white/10 text-text-secondary text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">Optional</span>
+                          )}
+                        </div>
                         <span className="text-[11px] text-text-secondary">{saga}</span>
                       </div>
                       

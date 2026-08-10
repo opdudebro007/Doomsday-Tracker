@@ -11,6 +11,7 @@ export interface MCUItem {
   timelineOrder: number;
   posterUrl?: string;
   extended?: boolean;
+  importance?: "imp" | "optional";
   synopsis: string;
   characters: string[];
 }
@@ -32,7 +33,8 @@ export const mcuTimeline: MCUItem[] = [
       "Peggy Carter",
       "Howard Stark",
       "Edwin Jarvis"
-    ]
+    ],
+    importance: "optional"
   },
   {
     id: "ca-first-avenger",
@@ -49,7 +51,8 @@ export const mcuTimeline: MCUItem[] = [
       "Bucky Barnes",
       "Red Skull"
     ],
-    posterUrl: "/posters/ca-first-avenger.jpg"
+    posterUrl: "/posters/ca-first-avenger.jpg",
+    importance: "imp"
   },
   {
     id: "captain-marvel",
@@ -65,7 +68,8 @@ export const mcuTimeline: MCUItem[] = [
       "Nick Fury",
       "Talos"
     ],
-    posterUrl: "/posters/captain-marvel.jpg"
+    posterUrl: "/posters/captain-marvel.jpg",
+    importance: "imp"
   },
   {
     id: "iron-man",
@@ -81,7 +85,8 @@ export const mcuTimeline: MCUItem[] = [
       "Pepper Potts",
       "Obadiah Stane"
     ],
-    posterUrl: "/posters/iron-man.jpg"
+    posterUrl: "/posters/iron-man.jpg",
+    importance: "imp"
   },
   {
     id: "iron-man-2",
@@ -98,7 +103,8 @@ export const mcuTimeline: MCUItem[] = [
       "Natasha Romanoff",
       "Justin Hammer"
     ],
-    posterUrl: "/posters/iron-man-2.jpg"
+    posterUrl: "/posters/iron-man-2.jpg",
+    importance: "imp"
   },
   {
     id: "incredible-hulk",
@@ -114,7 +120,8 @@ export const mcuTimeline: MCUItem[] = [
       "Betty Ross",
       "Emil Blonsky"
     ],
-    posterUrl: "/posters/incredible-hulk.jpg"
+    posterUrl: "/posters/incredible-hulk.jpg",
+    importance: "imp"
   },
   {
     id: "thor",
@@ -131,7 +138,8 @@ export const mcuTimeline: MCUItem[] = [
       "Jane Foster",
       "Odin"
     ],
-    posterUrl: "/posters/thor.jpg"
+    posterUrl: "/posters/thor.jpg",
+    importance: "imp"
   },
   {
     id: "avengers",
@@ -151,7 +159,8 @@ export const mcuTimeline: MCUItem[] = [
       "Clint Barton",
       "Loki"
     ],
-    posterUrl: "/posters/avengers.jpg"
+    posterUrl: "/posters/avengers.jpg",
+    importance: "imp"
   },
   {
     id: "iron-man-3",
@@ -167,7 +176,8 @@ export const mcuTimeline: MCUItem[] = [
       "Pepper Potts",
       "Aldrich Killian"
     ],
-    posterUrl: "/posters/iron-man-3.jpg"
+    posterUrl: "/posters/iron-man-3.jpg",
+    importance: "imp"
   },
   {
     id: "thor-dark-world",
@@ -184,7 +194,8 @@ export const mcuTimeline: MCUItem[] = [
       "Jane Foster",
       "Malekith"
     ],
-    posterUrl: "/posters/thor-dark-world.jpg"
+    posterUrl: "/posters/thor-dark-world.jpg",
+    importance: "imp"
   },
   {
     id: "ca-winter-soldier",
@@ -202,7 +213,8 @@ export const mcuTimeline: MCUItem[] = [
       "Sam Wilson",
       "Nick Fury"
     ],
-    posterUrl: "/posters/ca-winter-soldier.jpg"
+    posterUrl: "/posters/ca-winter-soldier.jpg",
+    importance: "imp"
   },
   {
     id: "gotg",
@@ -221,7 +233,8 @@ export const mcuTimeline: MCUItem[] = [
       "Groot",
       "Ronan"
     ],
-    posterUrl: "/posters/gotg.jpg"
+    posterUrl: "/posters/gotg.jpg",
+    importance: "imp"
   },
   {
     id: "gotg-vol-2",
@@ -240,7 +253,8 @@ export const mcuTimeline: MCUItem[] = [
       "Groot",
       "Ego"
     ],
-    posterUrl: "/posters/gotg-vol-2.jpg"
+    posterUrl: "/posters/gotg-vol-2.jpg",
+    importance: "imp"
   },
   {
     id: "avengers-aou",
@@ -259,7 +273,8 @@ export const mcuTimeline: MCUItem[] = [
       "Ultron",
       "Wanda Maximoff"
     ],
-    posterUrl: "/posters/avengers-aou.jpg"
+    posterUrl: "/posters/avengers-aou.jpg",
+    importance: "imp"
   },
   {
     id: "ant-man",
@@ -275,7 +290,8 @@ export const mcuTimeline: MCUItem[] = [
       "Hope van Dyne",
       "Hank Pym"
     ],
-    posterUrl: "/posters/ant-man.jpg"
+    posterUrl: "/posters/ant-man.jpg",
+    importance: "imp"
   },
   {
     id: "ca-civil-war",
@@ -293,7 +309,8 @@ export const mcuTimeline: MCUItem[] = [
       "T'Challa",
       "Peter Parker"
     ],
-    posterUrl: "/posters/ca-civil-war.jpg"
+    posterUrl: "/posters/ca-civil-war.jpg",
+    importance: "imp"
   },
   {
     id: "black-widow",
@@ -309,7 +326,8 @@ export const mcuTimeline: MCUItem[] = [
       "Yelena Belova",
       "Alexei Shostakov"
     ],
-    posterUrl: "/posters/black-widow.jpg"
+    posterUrl: "/posters/black-widow.jpg",
+    importance: "imp"
   },
   {
     id: "black-panther",
@@ -326,7 +344,8 @@ export const mcuTimeline: MCUItem[] = [
       "Shuri",
       "Okoye"
     ],
-    posterUrl: "/posters/black-panther.jpg"
+    posterUrl: "/posters/black-panther.jpg",
+    importance: "imp"
   },
   {
     id: "spider-man-homecoming",
@@ -343,7 +362,8 @@ export const mcuTimeline: MCUItem[] = [
       "Adrian Toomes",
       "Ned Leeds"
     ],
-    posterUrl: "/posters/spider-man-homecoming.jpg"
+    posterUrl: "/posters/spider-man-homecoming.jpg",
+    importance: "imp"
   },
   {
     id: "doctor-strange",
@@ -360,7 +380,8 @@ export const mcuTimeline: MCUItem[] = [
       "Mordo",
       "Ancient One"
     ],
-    posterUrl: "/posters/doctor-strange.jpg"
+    posterUrl: "/posters/doctor-strange.jpg",
+    importance: "imp"
   },
   {
     id: "thor-ragnarok",
@@ -378,7 +399,8 @@ export const mcuTimeline: MCUItem[] = [
       "Valkyrie",
       "Bruce Banner"
     ],
-    posterUrl: "/posters/thor-ragnarok.jpg"
+    posterUrl: "/posters/thor-ragnarok.jpg",
+    importance: "imp"
   },
   {
     id: "ant-man-wasp",
@@ -395,7 +417,8 @@ export const mcuTimeline: MCUItem[] = [
       "Hank Pym",
       "Janet van Dyne"
     ],
-    posterUrl: "/posters/ant-man-wasp.jpg"
+    posterUrl: "/posters/ant-man-wasp.jpg",
+    importance: "imp"
   },
   {
     id: "avengers-infinity-war",
@@ -414,7 +437,8 @@ export const mcuTimeline: MCUItem[] = [
       "Stephen Strange",
       "Peter Quill"
     ],
-    posterUrl: "/posters/avengers-infinity-war.jpg"
+    posterUrl: "/posters/avengers-infinity-war.jpg",
+    importance: "imp"
   },
   {
     id: "avengers-endgame",
@@ -435,7 +459,8 @@ export const mcuTimeline: MCUItem[] = [
       "Scott Lang",
       "Thanos"
     ],
-    posterUrl: "/posters/avengers-endgame.jpg"
+    posterUrl: "/posters/avengers-endgame.jpg",
+    importance: "imp"
   },
   {
     id: "loki-s1",
@@ -452,7 +477,8 @@ export const mcuTimeline: MCUItem[] = [
       "Sylvie",
       "He Who Remains"
     ],
-    posterUrl: "/posters/loki-s1.jpg"
+    posterUrl: "/posters/loki-s1.jpg",
+    importance: "imp"
   },
   {
     id: "wandavision",
@@ -469,7 +495,8 @@ export const mcuTimeline: MCUItem[] = [
       "Agatha Harkness",
       "Monica Rambeau"
     ],
-    posterUrl: "/posters/wandavision.jpg"
+    posterUrl: "/posters/wandavision.jpg",
+    importance: "imp"
   },
   {
     id: "shang-chi",
@@ -485,7 +512,8 @@ export const mcuTimeline: MCUItem[] = [
       "Katy",
       "Wenwu"
     ],
-    posterUrl: "/posters/shang-chi.jpg"
+    posterUrl: "/posters/shang-chi.jpg",
+    importance: "imp"
   },
   {
     id: "tfatws",
@@ -502,7 +530,8 @@ export const mcuTimeline: MCUItem[] = [
       "John Walker",
       "Zemo"
     ],
-    posterUrl: "/posters/tfatws.jpg"
+    posterUrl: "/posters/tfatws.jpg",
+    importance: "imp"
   },
   {
     id: "spider-man-ffh",
@@ -519,7 +548,8 @@ export const mcuTimeline: MCUItem[] = [
       "Nick Fury",
       "MJ"
     ],
-    posterUrl: "/posters/spider-man-ffh.jpg"
+    posterUrl: "/posters/spider-man-ffh.jpg",
+    importance: "imp"
   },
   {
     id: "spider-man-nwh",
@@ -538,7 +568,8 @@ export const mcuTimeline: MCUItem[] = [
       "Green Goblin",
       "Doc Ock"
     ],
-    posterUrl: "/posters/spider-man-nwh.jpg"
+    posterUrl: "/posters/spider-man-nwh.jpg",
+    importance: "imp"
   },
   {
     id: "eternals",
@@ -561,7 +592,8 @@ export const mcuTimeline: MCUItem[] = [
       "Ajak",
       "Thena"
     ],
-    posterUrl: "/posters/eternals.jpg"
+    posterUrl: "/posters/eternals.jpg",
+    importance: "imp"
   },
   {
     id: "hawkeye",
@@ -578,7 +610,8 @@ export const mcuTimeline: MCUItem[] = [
       "Yelena Belova",
       "Kingpin"
     ],
-    posterUrl: "/posters/hawkeye.jpg"
+    posterUrl: "/posters/hawkeye.jpg",
+    importance: "optional"
   },
   {
     id: "doctor-strange-mom",
@@ -595,7 +628,8 @@ export const mcuTimeline: MCUItem[] = [
       "America Chavez",
       "Wong"
     ],
-    posterUrl: "/posters/doctor-strange-mom.jpg"
+    posterUrl: "/posters/doctor-strange-mom.jpg",
+    importance: "imp"
   },
   {
     id: "moon-knight",
@@ -612,7 +646,8 @@ export const mcuTimeline: MCUItem[] = [
       "Arthur Harrow",
       "Khonshu"
     ],
-    posterUrl: "/posters/moon-knight.jpg"
+    posterUrl: "/posters/moon-knight.jpg",
+    importance: "optional"
   },
   {
     id: "ms-marvel",
@@ -628,7 +663,8 @@ export const mcuTimeline: MCUItem[] = [
       "Bruno",
       "Nakia"
     ],
-    posterUrl: "/posters/ms-marvel.jpg"
+    posterUrl: "/posters/ms-marvel.jpg",
+    importance: "optional"
   },
   {
     id: "thor-love-thunder",
@@ -646,7 +682,8 @@ export const mcuTimeline: MCUItem[] = [
       "Valkyrie",
       "Korg"
     ],
-    posterUrl: "/posters/thor-love-thunder.jpg"
+    posterUrl: "/posters/thor-love-thunder.jpg",
+    importance: "imp"
   },
   {
     id: "she-hulk",
@@ -663,7 +700,8 @@ export const mcuTimeline: MCUItem[] = [
       "Wong",
       "Emil Blonsky"
     ],
-    posterUrl: "/posters/she-hulk.jpg"
+    posterUrl: "/posters/she-hulk.jpg",
+    importance: "optional"
   },
   {
     id: "black-panther-wf",
@@ -681,7 +719,8 @@ export const mcuTimeline: MCUItem[] = [
       "Okoye",
       "Riri Williams"
     ],
-    posterUrl: "/posters/black-panther-wf.jpg"
+    posterUrl: "/posters/black-panther-wf.jpg",
+    importance: "imp"
   },
   {
     id: "ant-man-quantumania",
@@ -698,7 +737,8 @@ export const mcuTimeline: MCUItem[] = [
       "Kang the Conqueror",
       "Cassie Lang"
     ],
-    posterUrl: "/posters/ant-man-quantumania.jpg"
+    posterUrl: "/posters/ant-man-quantumania.jpg",
+    importance: "imp"
   },
   {
     id: "gotg-vol-3",
@@ -718,7 +758,8 @@ export const mcuTimeline: MCUItem[] = [
       "Drax",
       "Groot"
     ],
-    posterUrl: "/posters/gotg-vol-3.jpg"
+    posterUrl: "/posters/gotg-vol-3.jpg",
+    importance: "imp"
   },
   {
     id: "secret-invasion",
@@ -735,7 +776,8 @@ export const mcuTimeline: MCUItem[] = [
       "Gravik",
       "G'iah"
     ],
-    posterUrl: "/posters/secret-invasion.jpg"
+    posterUrl: "/posters/secret-invasion.jpg",
+    importance: "optional"
   },
   {
     id: "loki-s2",
@@ -753,7 +795,8 @@ export const mcuTimeline: MCUItem[] = [
       "O.B.",
       "Victor Timely"
     ],
-    posterUrl: "/posters/loki-s2.jpg"
+    posterUrl: "/posters/loki-s2.jpg",
+    importance: "imp"
   },
   {
     id: "the-marvels",
@@ -771,7 +814,8 @@ export const mcuTimeline: MCUItem[] = [
       "Nick Fury",
       "Dar-Benn"
     ],
-    posterUrl: "/posters/the-marvels.jpg"
+    posterUrl: "/posters/the-marvels.jpg",
+    importance: "imp"
   },
   {
     id: "echo",
@@ -787,7 +831,8 @@ export const mcuTimeline: MCUItem[] = [
       "Kingpin",
       "Daredevil"
     ],
-    posterUrl: "/posters/echo.jpg"
+    posterUrl: "/posters/echo.jpg",
+    importance: "optional"
   },
   {
     id: "deadpool-wolverine",
@@ -803,7 +848,8 @@ export const mcuTimeline: MCUItem[] = [
       "Wolverine",
       "Cassandra Nova"
     ],
-    posterUrl: "/posters/deadpool-wolverine.jpg"
+    posterUrl: "/posters/deadpool-wolverine.jpg",
+    importance: "imp"
   },
   {
     id: "agatha-all-along",
@@ -819,7 +865,8 @@ export const mcuTimeline: MCUItem[] = [
       "Teen",
       "Rio Vidal"
     ],
-    posterUrl: "/posters/agatha-all-along.jpg"
+    posterUrl: "/posters/agatha-all-along.jpg",
+    importance: "optional"
   },
   {
     id: "captain-america-bnw",
@@ -836,7 +883,8 @@ export const mcuTimeline: MCUItem[] = [
       "Thaddeus Ross",
       "The Leader"
     ],
-    posterUrl: "/posters/captain-america-bnw.jpg"
+    posterUrl: "/posters/captain-america-bnw.jpg",
+    importance: "imp"
   },
   {
     id: "thunderbolts",
@@ -856,7 +904,8 @@ export const mcuTimeline: MCUItem[] = [
       "US Agent",
       "Valentina"
     ],
-    posterUrl: "/posters/thunderbolts.jpg"
+    posterUrl: "/posters/thunderbolts.jpg",
+    importance: "imp"
   },
   {
     id: "fantastic-four",
@@ -874,7 +923,8 @@ export const mcuTimeline: MCUItem[] = [
       "Ben Grimm",
       "Galactus"
     ],
-    posterUrl: "/posters/fantastic-four.jpg"
+    posterUrl: "/posters/fantastic-four.jpg",
+    importance: "imp"
   }
 ];
 
