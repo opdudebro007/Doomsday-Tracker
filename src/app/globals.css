@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-marvel-red: #e62429;
+  --color-marvel-dark-red: #9e1418;
+  --color-background-dark: #0a0a0c;
+  --color-card-bg: #111113;
+  --color-card-border: rgba(255, 255, 255, 0.05);
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #9ca3af;
+}
+
+:root {
+  --background: var(--color-background-dark);
+  --foreground: var(--color-text-primary);
+}
+
+body {
+  background-color: var(--background);
+  background-image: radial-gradient(circle at top right, rgba(230,36,41,0.05), transparent 40%),
+                    radial-gradient(circle at bottom left, rgba(230,36,41,0.05), transparent 40%);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+
+.marvel-glow {
+  box-shadow: 0 0 15px rgba(230, 36, 41, 0.4);
+}
+
+.marvel-glow:hover {
+  box-shadow: 0 0 25px rgba(230, 36, 41, 0.6);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-marvel-red);
+}
