@@ -560,7 +560,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: 2,
     importance: "optional",
     timelineOrder: 2.2,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/agent-carter-s2.jpg"
   },
   {
     id: "iron-man",
@@ -1183,7 +1184,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: 4,
     importance: "imp",
     timelineOrder: 25.1,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/what-if-s1.jpg"
   },
   {
     id: "shang-chi",
@@ -1392,7 +1394,8 @@ export const mcuTimeline: MCUItem[] = [
     phase: 5,
     importance: "optional",
     timelineOrder: 35.1,
-    characters: []
+    characters: [],
+    posterUrl: "/posters/what-if-s2.jpg"
   },
   {
     id: "she-hulk",
