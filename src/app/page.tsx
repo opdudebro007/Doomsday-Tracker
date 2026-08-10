@@ -187,7 +187,7 @@ export default function Home() {
               ) : (
                 <div className="text-center py-8">You're completely caught up!</div>
               )}
-            </div>
+            </Tilt>
             
             {/* 4 STAT BLOCKS */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

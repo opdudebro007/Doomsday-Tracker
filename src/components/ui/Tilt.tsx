@@ -9,7 +9,9 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-interface TiltProps extends React.HTMLAttributes<HTMLDivElement> {
+import { HTMLMotionProps } from "framer-motion";
+
+interface TiltProps extends HTMLMotionProps<"div"> {
   children: React.ReactNode;
   rotation?: number;
   timing?: number;
