@@ -5,7 +5,9 @@ import { MCUItem, mcuTimeline } from "../data/timeline";
 
 interface TrackerContextType {
   watchedIds: string[];
+  favoriteIds: string[];
   toggleWatched: (id: string) => void;
+  toggleFavorite: (id: string) => void;
   resetProgress: () => void;
   isHydrated: boolean;
   
@@ -32,16 +34,25 @@ const TrackerContext = createContext<TrackerContextType | undefined>(undefined);
 
 export const TrackerProvider = ({ children }: { children: React.ReactNode }) => {
   const [watchedIds, setWatchedIds] = useState<string[]>([]);
+  const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
   const [isHydrated, setIsHydrated] = useState(false);
 
   // Load from local storage on mount
   useEffect(() => {
-    const saved = localStorage.getItem("doomsday-tracker-watched");
-    if (saved) {
+    const savedWatched = localStorage.getItem("doomsday-tracker-watched");
+    if (savedWatched) {
       try {
-        setWatchedIds(JSON.parse(saved));
+        setWatchedIds(JSON.parse(savedWatched));
       } catch (e) {
         console.error("Failed to parse watched items", e);
+      }
+    }
+    const savedFavorites = localStorage.getItem("doomsday-tracker-favorites");
+    if (savedFavorites) {
+      try {
+        setFavoriteIds(JSON.parse(savedFavorites));
+      } catch (e) {
+        console.error("Failed to parse favorite items", e);
       }
     }
     setIsHydrated(true);
@@ -51,8 +62,9 @@ export const TrackerProvider = ({ children }: { children: React.ReactNode }) => 
   useEffect(() => {
     if (isHydrated) {
       localStorage.setItem("doomsday-tracker-watched", JSON.stringify(watchedIds));
+      localStorage.setItem("doomsday-tracker-favorites", JSON.stringify(favoriteIds));
     }
-  }, [watchedIds, isHydrated]);
+  }, [watchedIds, favoriteIds, isHydrated]);
 
   const toggleWatched = (id: string) => {
     setWatchedIds((prev) =>
@@ -60,9 +72,16 @@ export const TrackerProvider = ({ children }: { children: React.ReactNode }) => 
     );
   };
 
+  const toggleFavorite = (id: string) => {
+    setFavoriteIds((prev) =>
+      prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]
+    );
+  };
+
   const resetProgress = () => {
     if (window.confirm("Are you sure you want to reset all progress?")) {
       setWatchedIds([]);
+      setFavoriteIds([]);
     }
   };
 
@@ -109,7 +128,9 @@ export const TrackerProvider = ({ children }: { children: React.ReactNode }) => 
     <TrackerContext.Provider
       value={{
         watchedIds,
+        favoriteIds,
         toggleWatched,
+        toggleFavorite,
         resetProgress,
         isHydrated,
         totalTitles,

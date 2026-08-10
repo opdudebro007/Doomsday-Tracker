@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { useTracker } from "@/context/TrackerContext";
 import { mcuTimeline } from "@/data/timeline";
 import { Play, Check, Clock, Calendar, Flame, Search, CheckCircle2, Circle, Filter, Sparkles, Film, Tv, Heart, ArrowDownUp } from "lucide-react";
@@ -15,7 +15,9 @@ export default function Home() {
   const {
     isHydrated,
     watchedIds,
+    favoriteIds,
     toggleWatched,
+    toggleFavorite,
     overallProgress,
     watchedTitlesCount,
     totalTitles,
@@ -32,6 +34,27 @@ export default function Home() {
   const [activeFilter, setActiveFilter] = useState<FilterType>("all");
   const [sortBy, setSortBy] = useState<SortType>("timeline");
   const [includeExtended, setIncludeExtended] = useState(false);
+  const [prefsLoaded, setPrefsLoaded] = useState(false);
+
+  useEffect(() => {
+    if (isHydrated && !prefsLoaded) {
+      const savedFilter = localStorage.getItem("doomsday-tracker-filter") as FilterType;
+      const savedSort = localStorage.getItem("doomsday-tracker-sort") as SortType;
+      const savedExtended = localStorage.getItem("doomsday-tracker-extended");
+      if (savedFilter) setActiveFilter(savedFilter);
+      if (savedSort) setSortBy(savedSort);
+      if (savedExtended !== null) setIncludeExtended(savedExtended === "true");
+      setPrefsLoaded(true);
+    }
+  }, [isHydrated, prefsLoaded]);
+
+  useEffect(() => {
+    if (prefsLoaded) {
+      localStorage.setItem("doomsday-tracker-filter", activeFilter);
+      localStorage.setItem("doomsday-tracker-sort", sortBy);
+      localStorage.setItem("doomsday-tracker-extended", includeExtended.toString());
+    }
+  }, [activeFilter, sortBy, includeExtended, prefsLoaded]);
 
   const filteredAndSorted = useMemo(() => {
     let result = mcuTimeline;
@@ -45,6 +68,7 @@ export default function Home() {
     if (activeFilter === "shows") result = result.filter(i => i.type === "show");
     if (activeFilter === "watched") result = result.filter(i => watchedIds.includes(i.id));
     if (activeFilter === "unwatched") result = result.filter(i => !watchedIds.includes(i.id));
+    if (activeFilter === "favorites") result = result.filter(i => favoriteIds.includes(i.id));
     if (activeFilter.startsWith("phase")) {
       const p = parseInt(activeFilter.replace("phase", ""));
       result = result.filter(i => i.phase === p);
@@ -60,9 +84,9 @@ export default function Home() {
     });
 
     return result;
-  }, [activeFilter, sortBy, watchedIds]);
+  }, [activeFilter, sortBy, watchedIds, favoriteIds, includeExtended]);
 
-  if (!isHydrated) return null;
+  if (!isHydrated || !prefsLoaded) return null;
 
   return (
     <div className="container mx-auto px-6 py-8 max-w-[1200px]">
@@ -215,6 +239,7 @@ export default function Home() {
           <AnimatePresence>
             {filteredAndSorted.map((item) => {
               const isWatched = watchedIds.includes(item.id);
+              const isFavorite = favoriteIds.includes(item.id);
               const saga = item.phase <= 3 ? "Infinity Saga" : "Multiverse Saga";
               
               return (
@@ -256,8 +281,16 @@ export default function Home() {
                       </div>
 
                       {/* Heart Icon */}
-                      <button className="absolute bottom-3 left-3 w-7 h-7 rounded-full bg-[#111216]/80 backdrop-blur border border-white/10 flex items-center justify-center text-text-secondary hover:text-white transition-colors z-20">
-                        <Heart className="w-3.5 h-3.5" />
+                      <button 
+                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleFavorite(item.id); }}
+                        className={cn(
+                          "absolute bottom-3 left-3 w-7 h-7 rounded-full backdrop-blur border flex items-center justify-center transition-colors z-20",
+                          isFavorite 
+                            ? "bg-[#e62429]/20 border-[#e62429]/50 text-[#e62429]" 
+                            : "bg-[#111216]/80 border-white/10 text-text-secondary hover:text-white"
+                        )}
+                      >
+                        <Heart className={cn("w-3.5 h-3.5", isFavorite && "fill-current")} />
                       </button>
                     </div>
 
