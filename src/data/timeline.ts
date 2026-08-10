@@ -28,7 +28,11 @@ export const mcuTimeline: MCUItem[] = [
     extended: true,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BMjMwMTcxMTIyNV5BMl5BanBnXkFtZTgwMzc0OTc2MzE@._V1_SX300.jpg",
     synopsis: "In 1946, Peggy Carter balances routine office work with secret missions for Howard Stark.",
-    characters: ["Peggy Carter", "Howard Stark", "Edwin Jarvis"],
+    characters: [
+      "Peggy Carter",
+      "Howard Stark",
+      "Edwin Jarvis"
+    ]
   },
   {
     id: "ca-first-avenger",
@@ -146,7 +150,8 @@ export const mcuTimeline: MCUItem[] = [
       "Natasha Romanoff",
       "Clint Barton",
       "Loki"
-    ]
+    ],
+    posterUrl: "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGc@._V1_SX300.jpg"
   },
   {
     id: "iron-man-3",
@@ -446,7 +451,8 @@ export const mcuTimeline: MCUItem[] = [
       "Mobius",
       "Sylvie",
       "He Who Remains"
-    ]
+    ],
+    posterUrl: "https://m.media-amazon.com/images/M/MV5BNDJkYzY3ZDUtZjFiYy00YmFiLWJmZTAtMzRlMDhlYWVmMzc2XkEyXkFqcGc@._V1_SX300.jpg"
   },
   {
     id: "wandavision",
@@ -746,7 +752,8 @@ export const mcuTimeline: MCUItem[] = [
       "Sylvie",
       "O.B.",
       "Victor Timely"
-    ]
+    ],
+    posterUrl: "https://m.media-amazon.com/images/M/MV5BMTY3NTUxNTAtNDFlMS00MGE5LWI5MmMtMTYwZmRjZjBmZmE3XkEyXkFqcGc@._V1_SX300.jpg"
   },
   {
     id: "the-marvels",
