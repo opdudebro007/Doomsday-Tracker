@@ -108,7 +108,7 @@ export default function Home() {
       {/* TOP DASHBOARD AREA */}
       <div className="bg-card/40 backdrop-blur-2xl border border-border/50 rounded-2xl p-5 md:p-8 mb-10 shadow-2xl relative overflow-hidden">
         {/* Intense Glassmorphism Ambient Glows */}
-        <div className="absolute top-[-10%] left-[10%] w-[500px] h-[500px] bg-marvel-red/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute top-[-10%] left-[10%] w-[500px] h-[500px] bg-doomsday-green/20 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-blue-500/15 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/10 rounded-full blur-[150px] pointer-events-none"></div>
         
@@ -120,23 +120,23 @@ export default function Home() {
               <svg height="220" width="220" className="transform -rotate-90">
                 <circle stroke="#222" fill="transparent" strokeWidth="16" r="95" cx="110" cy="110" />
                 <circle
-                  className="text-[#e62429] transition-all duration-1000 ease-out"
+                  className="text-[#22c55e] transition-all duration-1000 ease-out"
                   stroke="currentColor" fill="transparent" strokeWidth="16"
                   strokeDasharray={95 * 2 * Math.PI}
                   strokeDashoffset={(95 * 2 * Math.PI) - ((overallProgress / 100) * (95 * 2 * Math.PI))}
                   strokeLinecap="round" r="95" cx="110" cy="110"
-                  style={{ filter: "drop-shadow(0 0 12px rgba(230,36,41,0.6))" }}
+                  style={{ filter: "drop-shadow(0 0 12px rgba(34, 197, 94,0.6))" }}
                 />
               </svg>
               <div className="absolute flex flex-col items-center justify-center text-center">
                 <span className="text-[52px] font-bold font-heading leading-tight">{overallProgress}%</span>
                 <span className="text-[10px] font-bold text-muted-foreground tracking-[0.2em] mt-1">OVERALL PROGRESS</span>
-                <span className="text-[13px] font-bold text-[#e62429] mt-1 tracking-wide">{watchedTitlesCount} / {totalTitles} Done</span>
+                <span className="text-[13px] font-bold text-[#22c55e] mt-1 tracking-wide">{watchedTitlesCount} / {totalTitles} Done</span>
               </div>
             </div>
             
             <div className="w-full max-w-[280px] bg-muted h-2 rounded-full overflow-hidden">
-              <div className="bg-gradient-to-r from-orange-500 to-[#e62429] h-full rounded-full relative" style={{ width: `${overallProgress}%` }}>
+              <div className="bg-gradient-to-r from-orange-500 to-[#22c55e] h-full rounded-full relative" style={{ width: `${overallProgress}%` }}>
                 <div className="absolute right-0 top-0 bottom-0 w-4 bg-white/30 blur-[2px]"></div>
               </div>
             </div>
@@ -154,13 +154,13 @@ export default function Home() {
                     {nextUnwatched.posterUrl ? (
                       <img src={nextUnwatched.posterUrl} alt={nextUnwatched.title} className="w-full h-full object-cover" />
                     ) : (
-                      <Sparkles className="w-6 h-6 text-[#e62429] opacity-70" />
+                      <Sparkles className="w-6 h-6 text-[#22c55e] opacity-70" />
                     )}
                   </div>
                   
                   <div className="flex-1 w-full">
                     <div className="flex items-center gap-3 mb-2">
-                      <span className="bg-[#e62429] text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider uppercase">
+                      <span className="bg-[#22c55e] text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider uppercase">
                         UP NEXT • TIMELINE #{nextUnwatched.timelineOrder}
                       </span>
                       <span className="text-xs text-muted-foreground font-medium">{nextUnwatched.runtime} min</span>
@@ -172,7 +172,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex items-center gap-3 shrink-0 sm:self-end sm:mb-2">
-                    <button className="bg-[#e62429] hover:bg-[#e62429]/80 text-white font-bold py-2.5 px-6 rounded-full flex items-center gap-2 transition-colors shadow-[0_0_20px_rgba(230,36,41,0.3)]">
+                    <button className="bg-[#22c55e] hover:bg-[#22c55e]/80 text-white font-bold py-2.5 px-6 rounded-full flex items-center gap-2 transition-colors shadow-[0_0_20px_rgba(34, 197, 94,0.3)]">
                       <Play className="w-4 h-4 fill-current" /> Continue
                     </button>
                     <button 
@@ -199,7 +199,7 @@ export default function Home() {
             {/* LAST WATCHED FOOTER */}
             <div className="flex justify-between items-center text-[13px] px-2 mt-2">
               <div className="text-muted-foreground font-medium">Last Watched: <span className="text-foreground font-bold">{lastWatched?.title || "None"}</span></div>
-              {lastWatched && <div className="text-[#e62429] font-bold tracking-wide">Timeline #{lastWatched.timelineOrder}</div>}
+              {lastWatched && <div className="text-[#22c55e] font-bold tracking-wide">Timeline #{lastWatched.timelineOrder}</div>}
             </div>
             
           </div>
@@ -209,19 +209,19 @@ export default function Home() {
       {/* ROADMAP SECTION */}
       <div className="bg-card/40 backdrop-blur-2xl border border-border/50 rounded-2xl p-5 md:p-8 shadow-2xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-marvel-red/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-doomsday-green/10 rounded-full blur-[100px] pointer-events-none"></div>
         
         {/* Roadmap Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 relative z-10">
           <div className="flex items-center gap-3">
-            <Filter className="w-5 h-5 text-[#e62429]" />
+            <Filter className="w-5 h-5 text-[#22c55e]" />
             <h2 className="text-xl font-bold font-heading uppercase tracking-widest">MCU Timeline Roadmap</h2>
             <span className="bg-muted border border-border text-foreground text-[11px] font-bold px-3 py-1 rounded-full">{totalTitles} titles</span>
           </div>
           
           <div className="flex items-center gap-6">
             <label className="flex items-center gap-2 text-[13px] text-foreground font-medium cursor-pointer">
-              <input type="checkbox" checked={includeExtended} onChange={(e) => setIncludeExtended(e.target.checked)} className="rounded border-border bg-black/50 accent-[#e62429]" />
+              <input type="checkbox" checked={includeExtended} onChange={(e) => setIncludeExtended(e.target.checked)} className="rounded border-border bg-black/50 accent-[#22c55e]" />
               Include Extended TV (SHIELD, Agent Carter)
             </label>
             
@@ -270,7 +270,7 @@ export default function Home() {
               return (
                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ duration: 0.2 }} key={item.id}>
                   <TiltCard>
-                    <div className="flex flex-col h-full rounded-2xl bg-card/40 backdrop-blur-md border border-border/50 overflow-hidden group shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(230,36,41,0.15)] transition-all duration-300 relative">
+                    <div className="flex flex-col h-full rounded-2xl bg-card/40 backdrop-blur-md border border-border/50 overflow-hidden group shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(34, 197, 94,0.15)] transition-all duration-300 relative">
                     
                     {/* Poster Area */}
                     <Link href={`/title/${item.id}`} className="relative w-full aspect-[2/3] flex flex-col items-center justify-center transition-colors overflow-hidden group/poster bg-muted">
@@ -299,7 +299,7 @@ export default function Home() {
                           <>
                             {!item.posterUrl && (
                               <div className="flex flex-col items-center">
-                                <Film className="w-10 h-10 text-[#e62429] mb-3 opacity-80" />
+                                <Film className="w-10 h-10 text-[#22c55e] mb-3 opacity-80" />
                                 <h3 className="text-[13px] font-bold text-foreground text-center leading-tight mb-1">{item.title}</h3>
                                 <span className="text-[11px] text-muted-foreground">{item.year}</span>
                               </div>
@@ -314,7 +314,7 @@ export default function Home() {
                         className={cn(
                           "absolute bottom-3 left-3 w-7 h-7 rounded-full backdrop-blur border flex items-center justify-center transition-colors z-20",
                           isFavorite 
-                            ? "bg-[#e62429]/20 border-[#e62429]/50 text-[#e62429]" 
+                            ? "bg-[#22c55e]/20 border-[#22c55e]/50 text-[#22c55e]" 
                             : "bg-card/80 border-border text-muted-foreground hover:text-foreground"
                         )}
                       >
@@ -328,7 +328,7 @@ export default function Home() {
                         <div className="flex items-center gap-2">
                           <span className="text-[11px] font-bold text-[#eab308]">Phase {item.phase}</span>
                           {item.importance === "imp" ? (
-                            <span className="bg-[#e62429]/20 text-[#e62429] text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">Important</span>
+                            <span className="bg-[#22c55e]/20 text-[#22c55e] text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">Important</span>
                           ) : (
                             <span className="bg-foreground/10 text-muted-foreground text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">Optional</span>
                           )}
@@ -395,7 +395,7 @@ function FilterPill({ icon, label, active, onClick }: { icon?: React.ReactNode, 
       className={cn(
         "whitespace-nowrap flex items-center gap-2 px-4 py-1.5 rounded-full text-[12px] font-bold transition-all border",
         active 
-          ? "bg-[#e62429] text-white border-[#e62429]" 
+          ? "bg-[#22c55e] text-white border-[#22c55e]" 
           : "bg-muted text-muted-foreground border-border hover:text-foreground hover:border-foreground/30"
       )}
     >

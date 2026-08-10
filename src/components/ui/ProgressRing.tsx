@@ -14,7 +14,7 @@ export function ProgressRing({
   stroke = 8,
   progress,
   className,
-  colorClass = "text-marvel-red",
+  colorClass = "text-doomsday-green",
 }: ProgressRingProps) {
   const normalizedRadius = radius - stroke * 2;
   const circumference = normalizedRadius * 2 * Math.PI;

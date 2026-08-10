@@ -33,7 +33,7 @@ export default function TitleDetailPage({ params }: { params: Promise<{ id: stri
       </Link>
       
       {/* Ambient Glassmorphism Backgrounds */}
-      <div className="fixed top-[-10%] right-[-5%] w-[600px] h-[600px] bg-marvel-red/10 rounded-full blur-[150px] pointer-events-none -z-10"></div>
+      <div className="fixed top-[-10%] right-[-5%] w-[600px] h-[600px] bg-doomsday-green/10 rounded-full blur-[150px] pointer-events-none -z-10"></div>
       <div className="fixed bottom-[10%] left-[-10%] w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
 
       <div className="flex flex-col md:flex-row gap-8 relative z-10">
@@ -57,7 +57,7 @@ export default function TitleDetailPage({ params }: { params: Promise<{ id: stri
             className={`w-full mt-6 py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors ${
               isWatched 
                 ? "bg-foreground/10 text-foreground hover:bg-foreground/20" 
-                : "bg-marvel-red text-white hover:bg-marvel-dark-red"
+                : "bg-doomsday-green text-white hover:bg-doomsday-dark-green"
             }`}
           >
             {isWatched ? (
@@ -70,7 +70,7 @@ export default function TitleDetailPage({ params }: { params: Promise<{ id: stri
 
         {/* Details */}
         <div className="flex-1">
-          <div className="text-sm font-bold text-marvel-red mb-2 uppercase tracking-wider flex items-center gap-4">
+          <div className="text-sm font-bold text-doomsday-green mb-2 uppercase tracking-wider flex items-center gap-4">
             <span>Phase {item.phase}</span>
             <span>•</span>
             <span>Timeline #{item.timelineOrder}</span>
@@ -130,7 +130,7 @@ export default function TitleDetailPage({ params }: { params: Promise<{ id: stri
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors font-medium"
             >
-              <PlayCircle className="w-5 h-5 text-marvel-red" /> Watch Trailer
+              <PlayCircle className="w-5 h-5 text-doomsday-green" /> Watch Trailer
             </a>
           </div>
         </div>

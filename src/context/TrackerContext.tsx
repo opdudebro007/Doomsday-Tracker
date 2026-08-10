@@ -77,7 +77,7 @@ export const TrackerProvider = ({ children }: { children: React.ReactNode }) => 
           particleCount: 50,
           spread: 60,
           origin: { y: 0.7 },
-          colors: ['#e62429', '#ffffff', '#eab308'],
+          colors: ['#22c55e', '#ffffff', '#eab308'],
           disableForReducedMotion: true
         });
         return [...prev, id];

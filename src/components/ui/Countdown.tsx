@@ -37,11 +37,11 @@ export function Countdown() {
   return (
     <div className="flex gap-4 justify-center items-center text-center">
       <TimeUnit value={timeLeft.days} label="DAYS" />
-      <span className="text-2xl font-bold text-marvel-red">:</span>
+      <span className="text-2xl font-bold text-doomsday-green">:</span>
       <TimeUnit value={timeLeft.hours} label="HRS" />
-      <span className="text-2xl font-bold text-marvel-red">:</span>
+      <span className="text-2xl font-bold text-doomsday-green">:</span>
       <TimeUnit value={timeLeft.minutes} label="MINS" />
-      <span className="text-2xl font-bold text-marvel-red">:</span>
+      <span className="text-2xl font-bold text-doomsday-green">:</span>
       <TimeUnit value={timeLeft.seconds} label="SECS" />
     </div>
   );

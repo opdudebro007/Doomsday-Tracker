@@ -61,7 +61,7 @@ export default function SettingsPage() {
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
       <h1 className="text-4xl font-heading font-bold mb-8 flex items-center gap-4">
-        <Settings2 className="w-10 h-10 text-marvel-red" /> SETTINGS
+        <Settings2 className="w-10 h-10 text-doomsday-green" /> SETTINGS
       </h1>
 
       <div className="grid grid-cols-1 gap-6">
@@ -76,7 +76,7 @@ export default function SettingsPage() {
               onClick={() => setTheme(isDark ? "light" : "dark")}
               className="p-3 bg-foreground/5 hover:bg-foreground/10 rounded-lg transition-colors border border-border flex items-center gap-2"
             >
-              {mounted && isDark ? <Moon className="w-5 h-5 text-marvel-red" /> : <Sun className="w-5 h-5 text-yellow-500" />}
+              {mounted && isDark ? <Moon className="w-5 h-5 text-doomsday-green" /> : <Sun className="w-5 h-5 text-yellow-500" />}
               {mounted && isDark ? "Dark Mode" : "Light Mode"}
             </button>
           </div>
@@ -103,7 +103,7 @@ export default function SettingsPage() {
               <div>
                 <p className="font-bold">Import Progress</p>
                 <p className="text-sm text-text-secondary">Restore from a previous JSON backup.</p>
-                {importStatus && <p className="text-xs text-marvel-red mt-1">{importStatus}</p>}
+                {importStatus && <p className="text-xs text-doomsday-green mt-1">{importStatus}</p>}
               </div>
               <div>
                 <input

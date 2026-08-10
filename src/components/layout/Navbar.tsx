@@ -43,11 +43,11 @@ export function Navbar() {
           {/* LOGO */}
         <Link href="/" className="flex flex-col">
           <div className="flex items-center gap-2">
-            <div className="bg-[#e62429] text-white font-bold tracking-tighter px-2 py-0.5 text-lg leading-tight">
+            <div className="bg-[#22c55e] text-white font-bold tracking-tighter px-2 py-0.5 text-lg leading-tight">
               MARVEL
             </div>
             <span className="font-heading font-bold text-xl tracking-wide uppercase">
-              DOOMSDAY <span className="text-[#e62429]">TRACKER</span>
+              DOOMSDAY <span className="text-[#22c55e]">TRACKER</span>
             </span>
           </div>
           <span className="text-[10px] text-muted-foreground mt-0.5 tracking-wider">
@@ -66,12 +66,12 @@ export function Navbar() {
         {/* MIDDLE ACTIONS */}
         <div className="flex flex-col md:flex-row w-full md:w-auto items-center gap-3 md:gap-4 flex-1 justify-center">
           {/* Countdown Pill */}
-          <div className="flex w-full md:w-auto justify-center items-center gap-2 bg-marvel-red/10 border border-marvel-red/20 rounded-full pl-1 pr-4 py-1 text-xs md:text-sm">
-            <div className="w-5 h-5 md:w-6 md:h-6 shrink-0 rounded-full bg-marvel-red/20 flex items-center justify-center text-marvel-red">
+          <div className="flex w-full md:w-auto justify-center items-center gap-2 bg-doomsday-green/10 border border-doomsday-green/20 rounded-full pl-1 pr-4 py-1 text-xs md:text-sm">
+            <div className="w-5 h-5 md:w-6 md:h-6 shrink-0 rounded-full bg-doomsday-green/20 flex items-center justify-center text-doomsday-green">
               <Clock className="w-3 h-3 md:w-3.5 md:h-3.5" />
             </div>
             <span className="text-muted-foreground whitespace-nowrap">Doomsday in:</span>
-            <span className="font-mono text-marvel-red font-bold whitespace-nowrap">
+            <span className="font-mono text-doomsday-green font-bold whitespace-nowrap">
               {mounted ? `${timeLeft.d}d ${timeLeft.h}h ${timeLeft.m}m ${timeLeft.s}s` : "Loading..."}
             </span>
           </div>
@@ -105,9 +105,9 @@ export function Navbar() {
             <Trophy className="w-4 h-4" />
           </button>
           
-          <Link href="/stats" className="hidden md:flex items-center gap-2 rounded-full bg-marvel-red/10 border border-marvel-red/20 hover:bg-marvel-red/20 transition-colors px-3 py-1.5 text-marvel-red text-xs font-bold">
+          <Link href="/stats" className="hidden md:flex items-center gap-2 rounded-full bg-doomsday-green/10 border border-doomsday-green/20 hover:bg-doomsday-green/20 transition-colors px-3 py-1.5 text-doomsday-green text-xs font-bold">
             <div className="w-4 h-4 rounded-full border-2 border-current border-t-transparent animate-spin-slow"></div>
-            Stats <span className="bg-marvel-red text-white px-1.5 py-0.5 rounded-full text-[10px]">{overallProgress}%</span>
+            Stats <span className="bg-doomsday-green text-white px-1.5 py-0.5 rounded-full text-[10px]">{overallProgress}%</span>
           </Link>
 
           <button className="w-9 h-9 flex items-center justify-center rounded-full bg-muted border border-border text-muted-foreground hover:text-foreground hover:bg-foreground/5 transition-colors">

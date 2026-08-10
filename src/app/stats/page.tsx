@@ -88,7 +88,7 @@ export default function StatsPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
         <Card className="p-6">
           <h2 className="text-xl font-bold font-heading mb-6 flex items-center gap-2">
-            <TrendingUp className="w-5 h-5 text-marvel-red" /> Content Breakdown
+            <TrendingUp className="w-5 h-5 text-doomsday-green" /> Content Breakdown
           </h2>
           <div className="h-64">
             <ResponsiveContainer width="100%" height="100%">
@@ -125,7 +125,7 @@ export default function StatsPage() {
 
         <Card className="p-6">
           <h2 className="text-xl font-bold font-heading mb-6 flex items-center gap-2">
-            <Target className="w-5 h-5 text-marvel-red" /> Phase Completion
+            <Target className="w-5 h-5 text-doomsday-green" /> Phase Completion
           </h2>
           <div className="h-64">
             <ResponsiveContainer width="100%" height="100%">
@@ -147,7 +147,7 @@ export default function StatsPage() {
 
       <Card className="p-6">
         <h2 className="text-xl font-bold font-heading mb-6 flex items-center gap-2">
-          <Award className="w-5 h-5 text-marvel-red" /> Achievements
+          <Award className="w-5 h-5 text-doomsday-green" /> Achievements
         </h2>
         
         {achievements.length > 0 ? (
@@ -173,7 +173,7 @@ export default function StatsPage() {
 function StatCard({ icon, title, value }: { icon: React.ReactNode, title: string, value: string }) {
   return (
     <Card className="p-6 flex items-center gap-4 glowOnHover">
-      <div className="p-3 bg-marvel-red/10 text-marvel-red rounded-lg">
+      <div className="p-3 bg-doomsday-green/10 text-doomsday-green rounded-lg">
         {icon}
       </div>
       <div>

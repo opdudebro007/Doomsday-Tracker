@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`} suppressHydrationWarning>
-      <body className="min-h-full flex flex-col bg-background text-foreground antialiased selection:bg-marvel-red selection:text-white">
+      <body className="min-h-full flex flex-col bg-background text-foreground antialiased selection:bg-doomsday-green selection:text-white">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <TrackerProvider>
             <Navbar />
