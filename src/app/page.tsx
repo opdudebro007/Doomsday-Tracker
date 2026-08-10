@@ -96,10 +96,11 @@ export default function Home() {
     <div className="container mx-auto px-6 py-8 max-w-[1200px]">
       
       {/* TOP DASHBOARD AREA */}
-      <div className="bg-card border border-border rounded-2xl p-8 mb-10 shadow-2xl relative overflow-hidden">
-        {/* Subtle Background Glows */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-marvel-red/10 rounded-full blur-[100px] pointer-events-none"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-marvel-red/5 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="bg-card/40 backdrop-blur-2xl border border-border/50 rounded-2xl p-8 mb-10 shadow-2xl relative overflow-hidden">
+        {/* Intense Glassmorphism Ambient Glows */}
+        <div className="absolute top-[-10%] left-[10%] w-[500px] h-[500px] bg-marvel-red/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-blue-500/15 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/10 rounded-full blur-[150px] pointer-events-none"></div>
         
         <div className="flex flex-col xl:flex-row gap-12 relative z-10">
           
@@ -135,7 +136,7 @@ export default function Home() {
           <div className="xl:w-2/3 flex flex-col gap-5 justify-center">
             
             {/* UP NEXT CARD */}
-            <div className="flex-1 p-5 rounded-2xl border border-border bg-gradient-to-br from-card to-muted shadow-sm">
+            <div className="flex-1 p-5 rounded-2xl border border-border/50 bg-card/50 backdrop-blur-md shadow-lg">
               {nextUnwatched ? (
                 <div className="flex flex-col sm:flex-row gap-5 items-center">
                   {/* Poster Placeholder */}
@@ -196,9 +197,12 @@ export default function Home() {
       </div>
 
       {/* ROADMAP SECTION */}
-      <div className="bg-card border border-border rounded-2xl p-8 shadow-xl">
+      <div className="bg-card/40 backdrop-blur-2xl border border-border/50 rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-marvel-red/10 rounded-full blur-[100px] pointer-events-none"></div>
+        
         {/* Roadmap Header */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 relative z-10">
           <div className="flex items-center gap-3">
             <Filter className="w-5 h-5 text-[#e62429]" />
             <h2 className="text-xl font-bold font-heading uppercase tracking-widest">MCU Timeline Roadmap</h2>
@@ -256,7 +260,7 @@ export default function Home() {
               return (
                 <motion.div layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ duration: 0.2 }} key={item.id}>
                   <TiltCard>
-                    <div className="flex flex-col h-full rounded-2xl bg-card border border-border overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div className="flex flex-col h-full rounded-2xl bg-card/40 backdrop-blur-md border border-border/50 overflow-hidden group shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(230,36,41,0.15)] transition-all duration-300 relative">
                     
                     {/* Poster Area */}
                     <Link href={`/title/${item.id}`} className="relative w-full aspect-[2/3] flex flex-col items-center justify-center transition-colors overflow-hidden group/poster bg-muted">
@@ -361,7 +365,7 @@ export default function Home() {
 
 function StatBlock({ icon, label, value, valueColor = "text-foreground" }: { icon: React.ReactNode, label: string, value: string, valueColor?: string }) {
   return (
-    <div className="bg-card border border-border rounded-xl p-4 flex flex-col justify-center">
+    <div className="bg-card/40 backdrop-blur-md border border-border/50 rounded-xl p-4 flex flex-col justify-center shadow-lg">
       <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground font-medium tracking-wide mb-1">
         {icon} {label}
       </div>

@@ -28,14 +28,18 @@ export default function TitleDetailPage({ params }: { params: Promise<{ id: stri
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 font-medium">
+      <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 font-medium relative z-10">
         <ArrowLeft className="w-4 h-4" /> Back to Dashboard
       </Link>
+      
+      {/* Ambient Glassmorphism Backgrounds */}
+      <div className="fixed top-[-10%] right-[-5%] w-[600px] h-[600px] bg-marvel-red/10 rounded-full blur-[150px] pointer-events-none -z-10"></div>
+      <div className="fixed bottom-[10%] left-[-10%] w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
 
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col md:flex-row gap-8 relative z-10">
         {/* Poster */}
         <div className="w-full md:w-1/3 shrink-0">
-          <div className="w-full aspect-[2/3] bg-muted rounded-xl flex items-center justify-center border border-border relative overflow-hidden shadow-2xl">
+          <div className="w-full aspect-[2/3] bg-card/40 backdrop-blur-md rounded-xl flex items-center justify-center border border-border/50 relative overflow-hidden shadow-2xl">
             {item.posterUrl ? (
               <img src={item.posterUrl} alt={item.title} className="absolute inset-0 w-full h-full object-cover" />
             ) : (

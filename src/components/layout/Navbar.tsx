@@ -36,7 +36,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-border py-3">
+    <nav className="sticky top-4 z-50 w-[calc(100%-2rem)] max-w-[1200px] mx-auto bg-background/60 backdrop-blur-2xl border border-border/50 rounded-2xl py-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
       <div className="px-6 flex items-center justify-between gap-4">
         
         {/* LOGO */}

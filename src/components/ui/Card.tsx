@@ -9,7 +9,7 @@ export function Card({ className, glowOnHover = false, children, ...props }: Car
   return (
     <div
       className={cn(
-        "glass-panel rounded-xl overflow-hidden transition-all duration-300",
+        "bg-card/40 backdrop-blur-md border border-border/50 rounded-xl overflow-hidden transition-all duration-300 shadow-lg",
         glowOnHover && "hover:marvel-glow",
         className
       )}
