@@ -4,6 +4,7 @@ import { TrackerProvider } from "@/context/TrackerContext";
 import { Navbar } from "@/components/layout/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
+import { createClient } from "@/utils/supabase/server";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -20,17 +21,19 @@ export const metadata: Metadata = {
   description: "Track your progress towards watching everything required before Avengers: Doomsday.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col bg-background text-foreground antialiased selection:bg-doomsday-green selection:text-white">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <TrackerProvider>
-            <Navbar />
+            <Navbar user={user} />
             <main className="flex-1">
               {children}
             </main>

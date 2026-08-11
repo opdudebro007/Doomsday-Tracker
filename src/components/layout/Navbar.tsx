@@ -1,13 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { Search, Trophy, Share2, Settings, Flame, Shuffle, Clock } from "lucide-react";
+import { Search, Trophy, Share2, Settings, Flame, Shuffle, Clock, LogOut, User as UserIcon } from "lucide-react";
 import { useTracker } from "@/context/TrackerContext";
 import { useState, useEffect } from "react";
 import { AVENGERS_DOOMSDAY_RELEASE_DATE } from "@/data/timeline";
 import { Tilt } from "@/components/ui/Tilt";
+import { type User } from '@supabase/supabase-js'
+import { logout } from "@/app/login/actions";
 
-export function Navbar() {
+export function Navbar({ user }: { user: User | null }) {
   const { overallProgress, streak, searchQuery, setSearchQuery } = useTracker();
   
   const calculateTimeLeft = () => {
@@ -61,6 +63,17 @@ export function Navbar() {
             <div className="bg-[#1a150e] border border-yellow-600/30 text-yellow-500 rounded-full px-2 py-1 text-[10px] font-bold flex items-center gap-1">
               <Flame className="w-3 h-3" fill="currentColor" /> {streak}d
             </div>
+            {user ? (
+              <form action={logout}>
+                <button type="submit" className="w-8 h-8 flex items-center justify-center rounded-full bg-muted border border-border text-red-500 hover:bg-red-500/10 transition-colors">
+                  <LogOut className="w-3.5 h-3.5" />
+                </button>
+              </form>
+            ) : (
+              <Link href="/login" className="w-8 h-8 flex items-center justify-center rounded-full bg-doomsday-green border border-doomsday-green text-white hover:bg-doomsday-dark-green transition-colors">
+                <UserIcon className="w-3.5 h-3.5" />
+              </Link>
+            )}
           </div>
         </div>
 
@@ -122,6 +135,18 @@ export function Navbar() {
           <Link href="/settings" className="w-9 h-9 flex items-center justify-center rounded-full bg-muted border border-border text-muted-foreground hover:text-foreground hover:bg-foreground/5 transition-colors">
             <Settings className="w-4 h-4" />
           </Link>
+
+          {user ? (
+            <form action={logout}>
+              <button type="submit" className="flex items-center gap-2 rounded-full bg-muted border border-border hover:bg-red-500/10 hover:text-red-500 hover:border-red-500/30 transition-colors px-3 py-1.5 text-xs font-bold text-muted-foreground">
+                <LogOut className="w-3.5 h-3.5" /> Logout
+              </button>
+            </form>
+          ) : (
+            <Link href="/login" className="flex items-center gap-2 rounded-full bg-doomsday-green border border-doomsday-green hover:bg-doomsday-dark-green transition-colors px-4 py-1.5 text-xs font-bold text-white shadow-lg shadow-doomsday-green/20">
+              <UserIcon className="w-3.5 h-3.5" /> Login
+            </Link>
+          )}
         </div>
         
       </div>
